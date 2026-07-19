@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <link href="style.css" rel="stylesheet" />
+  <meta content="Bangsawan EPM" property="og:title" />
+  <meta content="Platform Bisnes Rangkaian &amp; Produk Online" property="og:description" />
+  <meta content="https://bangsawan-epm-network.netlify.app/preview.jpg" property="og:image" />
+  <meta content="https://bangsawan-epm-network.netlify.app/" property="og:url" />
+  <meta content="website" property="og:type" />
+  <style>
+    .lang-switch-inline {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0 18px;
+      font-weight: 700
+    }
+
+    .lang-switch-inline button {
+      background: none;
+      border: none;
+      color: #d4af37;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0 2px
+    }
+
+    .lang-switch-inline .sep {
+      color: #999
+    }
+
+    .lang-switch-inline button:hover {
+      color: #fff
+    }
+  </style>
+</head>
+
+<body>
+  <div class="floating-particles">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <header class="header">
+    <div class="container">
+
+        <img class="logo" src="images/logo.png" alt="Bangsawan EPM">
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            ☰
+        </button>
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <div class="lang-switch-inline">
+                <button onclick="setLang('bm')">BM</button>
+                <span class="sep">|</span>
+                <button onclick="setLang('en')">EN</button>
+            </div>
+
+            <nav>
+                <a class="active" href="#home">HOME</a>
+                <a href="#kelebihan">KELEBIHAN</a>
+                <a href="#produk">PRODUK</a>
+                <a href="#testimoni">TESTIMONI</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <a class="cta" href="#daftar" id="headerBtn">
+                DAFTAR SEKARANG
+            </a>
+
+        </div>
+
+    </div>
+</header>
+  <section class="hero-section" id="home">
+    <div class="hero-left">
+      <span class="hero-badge" id="heroBadge">#1 Affiliate Premium</span>
+      <h1 id="heroTitle">Bina Pendapatan<br /><span>Tanpa Modal</span></h1>
+      <p id="heroDesc">Platform affiliate premium dengan komisen tinggi. Sertai sekarang dan mulakan bisnes tanpa modal.
+      </p>
+      <a class="hero-btn" href="#daftar" id="heroBtn">🚀 CARA DAFTAR</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-stage">
+        <div class="hero-glow"></div>
+        <div class="hero-logo-box hero-logo-real">
+          <div class="hero-ring"></div><img alt="Bangsawan EPM" src="images/be-hero-logo.png" />
+        </div>
+        <div class="gold-platform"></div>
+      </div>
+    </div>
+  </section>
+  <section class="benefits-section" id="kelebihan">
+    <div class="container">
+      <h2 id="benefitsTitle">Kenapa Ramai Pilih Bangsawan EPM?</h2>
+      <p id="benefitsDesc">Platform affiliate premium untuk membantu anda menjana pendapatan tanpa perlu menyimpan stok.
+      </p>
+      <div class="benefits-grid">
+<div class="benefit-card">
+
+<img src="images/icons/daftar-percuma.png" alt="Daftar Percuma" class="benefit-icon">
+    <h3 id="b1">Daftar Percuma</h3>
+
+    <p>
+        Tiada yuran pendaftaran.<br>
+        Terus mula belajar dan menjana pendapatan.
+    </p>
+
+</div>        <div class="benefit-card">
+  <img src="images/icons/produk-berkualiti.png" alt="Produk Berkualiti" class="benefit-icon">
+          <h3 id="b2">Produk Berkualiti</h3>
+
+          <p>
+    Produk berkualiti tinggi dengan permintaan yang konsisten.
+</p>
+
+        </div>
+        <div class="benefit-card">
+          <img src="images/icons/group-support.png" alt="Group Support" class="benefit-icon">
+          <h3 id="b3">Bimbingan &amp; Group Support</h3>
+
+          <p>
+    Bimbingan langkah demi langkah serta sokongan komuniti yang aktif.
+</p>
+
+        </div>
+        <div class="benefit-card">
+          <img src="images/icons/bahan-promosi.png" alt="Bahan Promosi" class="benefit-icon">
+          <h3 id="b4">Bahan Promosi</h3>
+
+          <p>
+    Poster, video dan bahan pemasaran disediakan untuk memudahkan promosi.
+</p>
+
+        </div>
+        <div class="benefit-card">
+          <img src="images/icons/tiada-simpan-stok.png" alt="Tiada Simpan Stok" class="benefit-icon">
+          <h3 id="b5">Tiada Simpan Stok</h3>
+
+          <p>
+    Fokus menjual tanpa perlu menyimpan atau menguruskan stok produk.
+</p>
+
+        </div>
+        <div class="benefit-card">
+          <img src="images/icons/potensi-pendapatan.png" alt="Potensi Pendapatan" class="benefit-icon">
+          <h3 id="b6">Potensi Pendapatan</h3>
+
+          <p>
+    Nikmati peluang menjana pendapatan lumayan mengikut usaha anda.
+</p>
+
+        </div>
+      </div>
+      <a class="cta-button" href="#daftar" id="benefitsBtn">Cara Daftar</a>
+    </div>
+  </section>
+  <section class="produk-section" id="produk">
+    <div class="container">
+      <h2 id="productsTitle">Produk Pilihan</h2>
+      <p id="productsDesc">Terokai pelbagai kategori produk yang tersedia dalam platform Bangsawan EPM.</p>
+      <div class="produk-grid">
+        <div class="produk-card">
+          <img src="images/produk/produk-lelaki-epm-gold.jpg" alt="Produk Lelaki">
+          <h3 id="p1">🧔 Produk Lelaki</h3>
+        </div>
+        <div class="produk-card">
+          <img src="images/produk/produk-wanita-pinklady.jpg" alt="Produk Wanita">
+          <h3 id="p2">👩 Produk Wanita</h3>
+        </div>
+        <div class="produk-card">
+          <img src="images/produk/promosi-kopi-kurma.jpg" alt="Combo & Promosi">
+          <h3 id="p3">🎁 Combo &amp; Promosi</h3>
+        </div>
+        <div class="produk-card">
+          <img src="images/produk/produk-digital-be-one-prepaid.jpg" alt="Produk Digital">
+          <h3 id="p4">💻 Produk Digital</h3>
+        </div>
+      </div>
+      <a class="hero-btn" href="https://bangsawan-epm.com/shopping/ref/fAzZsiY78nD2G3he" id="productsBtn"
+        target="_blank">LIHAT SEMUA PRODUK</a>
+    </div>
+  </section>
+  <section class="section testimoni-section" id="testimoni">
+    <div class="container">
+      <h2 id="testiTitle">Bukti &amp; Testimoni Sebenar Ahli Bangsawan EPM</h2>
+      <p id="testiDesc">Lihat sendiri pengalaman, transaksi dan maklum balas daripada mereka yang telah bermula bersama
+        kami.</p>
+      <div class="testi-single">
+        <img loading="lazy" alt="Bukti dan Testimoni Sebenar Bangsawan EPM"
+          src="images/testimoni/testimoni-bukti.png" />
+      </div>
+      <a class="hero-btn" href="#daftar" id="testiBtn">CARA DAFTAR</a>
+    </div>
+  </section>
+  <section class="video-section" id="video">
+
+    <div class="container">
+
+        <h2 id="videoTitle">
+            🎥 Video Penerangan Bangsawan EPM
+        </h2>
+
+        <p id="videoDesc">
+            Tonton penerangan ringkas mengenai sistem Bangsawan EPM dan bagaimana anda boleh mula menjana pendapatan.
+        </p>
+
+        <div class="video-box">
+
+            <video
+                id="introVideo"
+                controls
+                preload="metadata"
+                playsinline
+                controlsList="nodownload"
+                poster="images/be-video-poster.jpg">
+
+                <source
+                    id="videoSource"
+                    src="videos/be-introduction-bm.mp4"
+                    type="video/mp4">
+
+                Browser anda tidak menyokong video.
+
+            </video>
+
+        </div>
+
+    </div>
+
+</section>
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 id="faqTitle">Soalan Lazim (FAQ)</h2>
+      <p id="faqDesc">Masih Ada Persoalan? Kami Jawab Di Sini.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary id="fq1q">❓ Adakah saya perlu keluarkan modal yang besar?</summary>
+          <p id="fq1a"><b>Tidak.</b> Anda boleh bermula tanpa perlu membeli stok atau mengeluarkan modal yang tinggi.
+            Fokus utama anda hanyalah mempromosikan produk menggunakan sistem yang disediakan.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq2q">❓ Saya tak pandai berniaga. Boleh ke saya berjaya?</summary>
+          <p id="fq2a"><b>Boleh.</b> Ramai ahli bermula tanpa pengalaman. Anda akan dibimbing langkah demi langkah dan
+            diberikan bahan promosi yang boleh terus digunakan.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq3q">❓ Saya perlu simpan stok di rumah?</summary>
+          <p id="fq3a"><b>Tidak perlu.</b> Semua urusan penyimpanan stok, pembungkusan dan penghantaran diuruskan oleh
+            pihak Bangsawan EPM. Anda hanya fokus mendapatkan pelanggan.</p>
+        </details>
+        <details class="faq-item">
+    <summary id="fq3bq">
+        ❓ Adakah saya wajib menggunakan sistem dropship sahaja? Bolehkah saya menyimpan stok sendiri dan membuat COD atau penghantaran kepada pelanggan?
+    </summary>
+
+    <p id="fq3ba">
+        <b>Tidak.</b> Anda bebas memilih cara perniagaan yang paling sesuai dengan keperluan anda. Selain menggunakan sistem dropship, anda juga boleh membeli dan menyimpan stok sendiri untuk menjalankan perniagaan secara <b>COD (Cash on Delivery), penghantaran sendiri (self delivery), self pickup</b>, atau menggunakan perkhidmatan kurier pilihan anda.
+        <br><br>
+        Ramai ejen memilih untuk menyimpan stok kerana ia membolehkan pelanggan menerima produk dengan lebih cepat, memberikan servis yang lebih pantas, serta memberi anda kawalan penuh terhadap stok, jualan dan keuntungan. Anda juga boleh menggabungkan sistem dropship dan stok sendiri mengikut kesesuaian perniagaan anda.
+    </p>
+</details>
+        <details class="faq-item">
+          <summary id="fq4q">❓ Macam mana saya akan menerima komisen?</summary>
+          <p id="fq4a">Setiap kali pelanggan membuat pembelian menggunakan link atau referral anda, komisen akan
+            <b>dikreditkan terus ke dalam akaun e-Wallet Bangsawan EPM</b> anda. Anda boleh menyemak jumlah komisen
+            melalui sistem ahli.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq5q">❓ Saya bekerja sepenuh masa. Masih boleh buat?</summary>
+          <p id="fq5a"><b>Boleh.</b> Ramai ahli menjalankan bisnes ini secara sambilan menggunakan telefon pada waktu
+            lapang.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq6q">❓ Perlu buat live atau tunjuk muka?</summary>
+          <p id="fq6a"><b>Tidak semestinya.</b> Anda bebas memilih cara promosi yang sesuai. Ramai ahli menggunakan
+            poster, video dan bahan promosi yang telah disediakan.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq7q">❓ Ada bimbingan selepas saya daftar?</summary>
+          <p id="fq7a"><b>Ya.</b> Selepas mendaftar, anda akan mendapat akses kepada <b>Group Support</b> dan dibimbing
+            oleh leader yang berpengalaman.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq8q">❓ Berapa lama proses pendaftaran?</summary>
+          <p id="fq8a">Proses pendaftaran biasanya hanya mengambil beberapa minit. Selepas akaun berjaya diaktifkan,
+            anda boleh terus mengakses sistem.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq9q">❓ Produk apa yang boleh saya promosikan?</summary>
+          <p id="fq9a">Anda boleh memilih daripada pelbagai kategori seperti produk lelaki, produk wanita, combo
+            promosi, produk digital dan banyak lagi.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="fq10q">❓ Kalau saya perlukan bantuan, siapa boleh saya hubungi?</summary>
+          <p id="fq10a">Anda boleh terus menghubungi saya melalui WhatsApp untuk bantuan daripada proses pendaftaran
+            sehingga memahami sistem Bangsawan EPM.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="faq-section daftar-section" id="daftar">
+    <div class="container">
+      <h2 id="joinTitle">CARA DAFTAR BANGSAWAN EPM</h2>
+      <p id="joinDesc">Mulakan langkah anda dengan mudah.</p>
+      <div class="benefits-grid">
+<div class="benefit-card">
+    <img src="images/icons/klik-link-pendaftaran.png" class="join-icon" alt="Klik Link Pendaftaran">
+    <h3 id="join1">1. Klik Link Pendaftaran</h3>
+</div>
+
+<div class="benefit-card">
+    <img src="images/icons/isi-maklumat-ahli.png" class="join-icon" alt="Isi Maklumat Ahli">
+    <h3 id="join2">2. Isi Maklumat Ahli</h3>
+</div>
+
+<div class="benefit-card">
+    <img src="images/icons/aktifkan-akaun.png" class="join-icon" alt="Aktifkan Akaun">
+    <h3 id="join3">3. Aktifkan Akaun</h3>
+</div>
+
+<div class="benefit-card">
+    <img src="images/icons/mula-promosi.png" class="join-icon" alt="Mula Promosi">
+    <h3 id="join4">4. Mula Promosi &amp; Jana Komisen</h3>
+</div>      </div>
+      <a class="cta-button" href="https://bangsawan-epm.com/ref/hanepm" id="joinBtn">DAFTAR SEKARANG</a>
+    </div>
+  </section>
+  <section class="contact-section" id="hubungi-kami">
+    <div class="container contact-container">
+      <div class="contact-logo">
+        <img alt="Han Empire Logo" src="assets/han-empire-logo.png" />
+      </div>
+      <div class="contact-content">
+        <h2 id="contactTitle">HUBUNGI KAMI</h2>
+        <p id="contactDesc">Perlukan bantuan sebelum bermula? Kami sedia membantu anda.</p>
+        <div class="contact-buttons">
+          <a class="cta whatsapp-btn"
+            href="https://wa.me/601115788698?text=Assalamualaikum%2C%20saya%20berminat%20untuk%20menyertai%20Bangsawan%20EPM%20dan%20ingin%20mendapatkan%20maklumat%20lanjut%20mengenai%20peluang%20serta%20cara%20untuk%20bermula."
+            id="waBtn" target="_blank">
+            CHAT WHATSAPP SEKARANG
+          </a>
+          <a class="cta group-btn" href="https://chat.whatsapp.com/Fs8jwibV6cJ977A1ELeslO" id="groupBtn"
+            target="_blank">
+            JOIN GROUP SUPPORT
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const T = {
+      bm: {
+        heroBadge: "#1 Affiliate Premium",
+        heroTitle: "Bina Pendapatan<br><span>Tanpa Modal</span>",
+        heroDesc: "Platform affiliate premium dengan komisen tinggi. Sertai sekarang dan mulakan bisnes tanpa modal.",
+        heroBtn: "🚀 CARA DAFTAR",
+        nav: ["HOME", "KELEBIHAN", "PRODUK", "TESTIMONI", "FAQ"]
+      },
+      en: {
+        heroBadge: "#1 Premium Affiliate",
+        heroTitle: "Build Your Income<br><span>Without Capital</span>",
+        heroDesc: "Premium affiliate platform with high commissions. Join today and start your business without capital.",
+        heroBtn: "🚀 HOW TO JOIN",
+        nav: ["HOME", "BENEFITS", "PRODUCTS", "TESTIMONIALS", "FAQ"]
+      }
+    };
+
+    function setLang(lang) {
+      const d = T[lang];
+      const byId = id => document.getElementById(id);
+      if (byId("heroBadge")) byId("heroBadge").innerHTML = d.heroBadge;
+      if (byId("heroTitle")) byId("heroTitle").innerHTML = d.heroTitle;
+      if (byId("heroDesc")) byId("heroDesc").innerHTML = d.heroDesc;
+      if (byId("heroBtn")) byId("heroBtn").innerHTML = d.heroBtn;
+      document.querySelectorAll("nav a").forEach((a, i) => {
+        if (d.nav[i]) a.textContent = d.nav[i];
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".lang-switch-inline button")[0]?.addEventListener("click", () => setLang("bm"));
+      document.querySelectorAll(".lang-switch-inline button")[1]?.addEventListener("click", () => setLang("en"));
+      setLang("bm");
+    });
+
+
+    // Benefits translation
+    T.bm.benefits = {
+      title: "Kenapa Ramai Pilih Bangsawan EPM?",
+      desc: "Platform affiliate premium untuk membantu anda menjana pendapatan tanpa perlu menyimpan stok.",
+      cards: ["Daftar Percuma", "Produk Berkualiti", "Bimbingan & Group Support", "Bahan Promosi", "Tiada Simpan Stok", "Potensi Pendapatan"],
+      btn: "Cara Daftar"
+    };
+    T.en.benefits = {
+      title: "Why Choose Bangsawan EPM?",
+      desc: "A premium affiliate platform that helps you earn income without keeping inventory.",
+      cards: ["Free Registration", "Quality Products", "Training & Group Support", "Marketing Materials", "No Inventory Needed", "High Income Potential"],
+      btn: "How to Join"
+    };
+
+    const _oldSetLang = setLang;
+setLang = function (lang) {
+  _oldSetLang(lang);
+  const b = T[lang] && T[lang].benefits;
+  if (!b) return;
+  const ids = ["b1","b2","b3","b4","b5","b6"];
+  document.getElementById("benefitsTitle")?.replaceChildren(document.createTextNode(b.title));
+  document.getElementById("benefitsDesc")?.replaceChildren(document.createTextNode(b.desc));
+  ids.forEach((id,i)=>{
+    const e=document.getElementById(id);
+    if(e) e.textContent=b.cards[i]||"";
+  });
+  const btn=document.getElementById("benefitsBtn");
+  if(btn) btn.textContent=b.btn;
+};
+
+
+    T.bm.headerBtn = "DAFTAR SEKARANG";
+    T.en.headerBtn = "JOIN NOW";
+    T.bm.products = {
+      title: "Produk Pilihan",
+      desc: "Terokai pelbagai kategori produk yang tersedia dalam platform Bangsawan EPM.",
+      cards: ["🧔 Produk Lelaki", "👩 Produk Wanita", "🎁 Combo & Promosi", "💻 Produk Digital"],
+      btn: "LIHAT SEMUA PRODUK"
+    };
+    T.en.products = {
+      title: "Featured Products",
+      desc: "Explore the product categories available on the Bangsawan EPM platform.",
+      cards: ["🧔 Men's Products", "👩 Women's Products", "🎁 Bundles & Promotions", "💻 Digital Products"],
+      btn: "VIEW ALL PRODUCTS"
+    };
+
+    const __prev = setLang;
+    setLang = function (lang) {
+      __prev(lang);
+      if (document.getElementById("headerBtn")) document.getElementById("headerBtn").textContent = T[lang].headerBtn;
+      const p = T[lang].products;
+      if (productsTitle) productsTitle.textContent = p.title;
+      if (productsDesc) productsDesc.textContent = p.desc;
+      ["p1", "p2", "p3", "p4"].forEach((id, i) => { let e = document.getElementById(id); if (e) e.textContent = p.cards[i]; });
+      if (productsBtn) productsBtn.textContent = p.btn;
+    };
+
+
+    T.bm.testi = {
+      title: "Bukti & Testimoni Sebenar Ahli Bangsawan EPM",
+      desc: "Lihat sendiri pengalaman, transaksi dan maklum balas daripada mereka yang telah bermula bersama kami.",
+      btn: "CARA DAFTAR"
+    };
+T.en.testi = {
+    title: "Real Results & Testimonials from Bangsawan EPM Members",
+    desc: "See real experiences, transactions and feedback from members who have started their journey with us.",
+    btn: "HOW TO JOIN"
+};
+
+T.bm.video = {
+    title: "🎥 Video Penerangan Bangsawan EPM",
+    desc: "Tonton penerangan ringkas mengenai sistem Bangsawan EPM dan bagaimana anda boleh mula menjana pendapatan.",
+    src: "videos/be-introduction-bm.mp4"
+};
+
+T.en.video = {
+    title: "🎥 Bangsawan EPM Introduction Video",
+    desc: "Watch a short introduction to Bangsawan EPM and discover how you can start earning an income.",
+    src: "videos/be-introduction-en.mp4"
+};
+    const ___prev = setLang;
+    setLang = function (lang) {
+      ___prev(lang);
+      const t = T[lang].testi;
+      if (testiTitle) testiTitle.textContent = t.title;
+      if (testiDesc) testiDesc.textContent = t.desc;
+      if (testiBtn) testiBtn.textContent = t.btn;
+    };
+const ____videoPrev = setLang;
+
+setLang = function(lang) {
+    ____videoPrev(lang);
+
+    const v = T[lang].video;
+
+    if (document.getElementById("videoTitle"))
+        document.getElementById("videoTitle").textContent = v.title;
+
+    if (document.getElementById("videoDesc"))
+        document.getElementById("videoDesc").textContent = v.desc;
+
+    const source = document.getElementById("videoSource");
+    const video = document.getElementById("introVideo");
+
+    if (source && video) {
+        source.src = v.src;
+        video.load();
+    }
+};
+
+    T.bm.faq = {
+      title: "Soalan Lazim (FAQ)",
+      desc: "Masih Ada Persoalan? Kami Jawab Di Sini.",
+      q: [
+        "❓ Adakah saya perlu keluarkan modal yang besar?",
+        "❓ Saya tak pandai berniaga. Boleh ke saya berjaya?",
+        "❓ Saya perlu simpan stok di rumah?",
+        "❓ Macam mana saya akan menerima komisen?",
+        "❓ Saya bekerja sepenuh masa. Masih boleh buat?",
+        "❓ Perlu buat live atau tunjuk muka?",
+        "❓ Ada bimbingan selepas saya daftar?",
+        "❓ Berapa lama proses pendaftaran?",
+        "❓ Produk apa yang boleh saya promosikan?",
+        "❓ Kalau saya perlukan bantuan, siapa boleh saya hubungi?"
+      ],
+      a: [
+        "<b>Tidak.</b> Anda boleh bermula tanpa perlu membeli stok atau mengeluarkan modal yang tinggi. Fokus utama anda hanyalah mempromosikan produk menggunakan sistem yang disediakan.",
+        "<b>Boleh.</b> Ramai ahli bermula tanpa pengalaman. Anda akan dibimbing langkah demi langkah dan diberikan bahan promosi yang boleh terus digunakan.",
+        "<b>Tidak perlu.</b> Semua urusan penyimpanan stok, pembungkusan dan penghantaran diuruskan oleh pihak Bangsawan EPM. Anda hanya fokus mendapatkan pelanggan.",
+        "Setiap kali pelanggan membuat pembelian menggunakan link atau referral anda, komisen akan <b>dikreditkan terus ke dalam akaun e-Wallet Bangsawan EPM</b> anda.",
+        "<b>Boleh.</b> Ramai ahli menjalankan bisnes ini secara sambilan menggunakan telefon pada waktu lapang.",
+        "<b>Tidak semestinya.</b> Anda bebas memilih cara promosi yang sesuai.",
+        "<b>Ya.</b> Selepas mendaftar, anda akan mendapat akses kepada <b>Group Support</b>.",
+        "Proses pendaftaran biasanya hanya mengambil beberapa minit.",
+        "Anda boleh memilih daripada pelbagai kategori produk.",
+        "Anda boleh terus menghubungi saya melalui WhatsApp untuk bantuan."
+      ]
+    };
+    
+    T.bm.faqExtra = {
+      q: "❓ Adakah saya wajib menggunakan sistem dropship sahaja? Bolehkah saya menyimpan stok sendiri dan membuat COD atau penghantaran kepada pelanggan?",
+      a: "<b>Tidak.</b> Anda bebas memilih cara perniagaan yang paling sesuai dengan keperluan anda. Selain menggunakan sistem dropship, anda juga boleh membeli dan menyimpan stok sendiri untuk menjalankan perniagaan secara <b>COD (Cash on Delivery), penghantaran sendiri (self delivery), self pickup</b>, atau menggunakan perkhidmatan kurier pilihan anda.<br><br>Ramai ejen memilih untuk menyimpan stok kerana ia membolehkan pelanggan menerima produk dengan lebih cepat, memberikan servis yang lebih pantas, serta memberi anda kawalan penuh terhadap stok, jualan dan keuntungan. Anda juga boleh menggabungkan sistem dropship dan stok sendiri mengikut kesesuaian perniagaan anda."
+    };
+
+    T.en.faq = {
+      title: "Frequently Asked Questions (FAQ)",
+      desc: "Have questions? We've answered the most common ones below.",
+      q: [
+        "❓ Do I need a large amount of capital to start?",
+        "❓ I have no business experience. Can I still succeed?",
+        "❓ Do I need to keep stock at home?",
+        "❓ How do I receive my commission?",
+        "❓ I work full-time. Can I still do this?",
+        "❓ Do I need to go live or show my face?",
+        "❓ Will I receive guidance after registering?",
+        "❓ How long does registration take?",
+        "❓ What products can I promote?",
+        "❓ Who can I contact if I need help?"
+      ],
+      a: [
+        "<b>No.</b> You can start without buying inventory or investing a large amount of money.",
+        "<b>Yes.</b> Many members started with no experience and receive step-by-step guidance.",
+        "<b>No.</b> Inventory, packing and shipping are handled by Bangsawan EPM.",
+        "Your commission is credited directly to your Bangsawan EPM e-Wallet.",
+        "<b>Yes.</b> Many members run this business part-time using only their phone.",
+        "<b>Not necessarily.</b> You may promote using the provided marketing materials.",
+        "<b>Yes.</b> You will receive access to our Group Support after registering.",
+        "Registration normally takes only a few minutes.",
+        "You can promote men's, women's, digital products, bundles and more.",
+        "You can contact me directly via WhatsApp for assistance."
+      ]
+    };
+
+    
+    T.en.faqExtra = {
+      q: "❓ Am I required to use only the dropship system? Can I keep my own stock and offer COD or deliver directly to customers?",
+      a: "<b>No.</b> You are free to choose the business method that suits you best. Besides using the dropship system, you may also purchase and keep your own stock to sell through <b>Cash on Delivery (COD), self delivery, self pickup</b>, or any courier service of your choice.<br><br>Many agents choose to keep stock because it allows customers to receive products faster, provides quicker service, and gives you full control over inventory, sales and profits. You may also combine both the dropship and self-stock methods according to your business needs."
+    };
+
+    const ____prev = setLang;
+    setLang = function (lang) {
+      ____prev(lang);
+      const f = T[lang].faq;
+      faqTitle.textContent = f.title;
+      faqDesc.textContent = f.desc;
+      for (let i = 1; i <= 10; i++) {
+        document.getElementById('fq' + i + 'q').textContent = f.q[i - 1];
+        document.getElementById('fq' + i + 'a').innerHTML = f.a[i - 1];
+      }
+      if(document.getElementById('fq3bq')) document.getElementById('fq3bq').textContent=T[lang].faqExtra.q;
+      if(document.getElementById('fq3ba')) document.getElementById('fq3ba').innerHTML=T[lang].faqExtra.a;
+    };
+
+
+    T.bm.join = { title: "CARA DAFTAR BANGSAWAN EPM", desc: "Mulakan langkah anda dengan mudah.", cards: ["1. Klik Link Pendaftaran", "2. Isi Maklumat Ahli", "3. Aktifkan Akaun", "4. Mula Promosi & Jana Komisen"], btn: "DAFTAR SEKARANG" };
+    T.en.join = { title: "HOW TO JOIN BANGSAWAN EPM", desc: "Start your journey in just a few simple steps.", cards: ["1. Click the Registration Link", "2. Fill in Your Details", "3. Activate Your Account", "4. Start Promoting & Earn Commissions"], btn: "REGISTER NOW" };
+
+    T.bm.contact = { title: "HUBUNGI KAMI", desc: "Perlukan bantuan sebelum bermula? Kami sedia membantu anda.", wa: "CHAT WHATSAPP SEKARANG", group: "JOIN GROUP SUPPORT" };
+    T.en.contact = { title: "CONTACT US", desc: "Need help before getting started? We're here to assist you.", wa: "CHAT ON WHATSAPP", group: "JOIN GROUP SUPPORT" };
+
+    const _____prev = setLang;
+    setLang = function (lang) {
+      _____prev(lang);
+      const j = T[lang].join;
+      joinTitle.textContent = j.title;
+      joinDesc.textContent = j.desc;
+      ["join1", "join2", "join3", "join4"].forEach((id, i) => document.getElementById(id).textContent = j.cards[i]);
+      joinBtn.textContent = j.btn;
+
+      const c = T[lang].contact;
+      contactTitle.textContent = c.title;
+      contactDesc.textContent = c.desc;
+      waBtn.textContent = c.wa;
+      groupBtn.textContent = c.group;
+    };
+    // =============================
+// MOBILE MENU TOGGLE
+// =============================
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuToggle && mobileMenu) {
+
+    menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    });
+
+}
+  </script>
+</body>
+
+</html>
