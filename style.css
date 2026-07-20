@@ -734,7 +734,7 @@ END PHASE1 DISABLE */
 .benefit-icon{
     display:block;
     width:100%;
-    max-width:180px;
+    max-width:260px;
     height:auto;
     margin:0 auto 20px;
 }
@@ -1809,3 +1809,22 @@ text-align:center;transition:.35s}
 }
 
 #visitorCounter,#joinCounter{transition:.35s;}
+
+
+
+/* ===== Repair Join Icons ===== */
+.join-icon{
+    display:block;
+    width:160px;
+    height:160px;px;
+    object-fit:contain;
+    margin: auto 20px;
+}
+
+.daftar-section .benefit-card{
+    text-align:center;
+}
+
+.daftar-section .benefit-card h3{
+    margin-top:10px;
+}
