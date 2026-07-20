@@ -1755,3 +1755,57 @@ padding:13px;
 font-size:15px;
 }
 }
+
+
+/* Visitor Card V1 */
+.visitor-section{padding:70px 20px;background:transparent}
+.visitor-container{display:block!important;max-width:900px!important;margin:0 auto!important}
+.visitor-card{
+max-width:700px;
+margin:0 auto;
+padding:45px 30px;
+text-align:center;
+background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+border:1px solid rgba(212,175,55,.45);
+border-radius:24px;
+backdrop-filter:blur(10px);
+box-shadow:0 15px 45px rgba(0,0,0,.45),0 0 22px rgba(212,175,55,.15);
+transition:.35s}
+.visitor-card:hover{transform:translateY(-6px);box-shadow:0 22px 55px rgba(0,0,0,.5),0 0 35px rgba(212,175,55,.28);border-color:#ffd86b}
+.visitor-eye{font-size:54px;margin-bottom:18px;filter:drop-shadow(0 0 10px rgba(212,175,55,.5))}
+.visitor-number{font-size:64px;font-weight:800;color:#d4af37;letter-spacing:2px}
+.visitor-title{font-size:26px;font-weight:700;margin-top:12px}
+.visitor-line{width:140px;height:2px;background:linear-gradient(90deg,transparent,#d4af37,transparent);margin:22px auto}
+.visitor-card p{color:#ddd;line-height:1.8;font-size:18px}
+@media(max-width:768px){
+.visitor-card{padding:35px 20px}
+.visitor-number{font-size:42px}
+.visitor-title{font-size:22px}
+.visitor-eye{font-size:42px}
+}
+
+
+/* Premium Join Interest Card */
+.join-interest-card{
+max-width:700px;margin:10px auto 35px;padding:42px 30px;
+background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+border:1px solid rgba(212,175,55,.45);
+border-radius:24px;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 45px rgba(0,0,0,.35),0 0 28px rgba(212,175,55,.18);
+text-align:center;transition:.35s}
+.join-interest-card:hover{transform:translateY(-6px);border-color:#ffd86b;box-shadow:0 26px 55px rgba(0,0,0,.45),0 0 40px rgba(212,175,55,.35)}
+.join-icon-premium{font-size:54px}
+.join-count{font-size:64px;font-weight:900;color:#ffd86b;margin:10px 0}
+.join-heading,.join-subheading,.join-brand{font-weight:800;letter-spacing:2px}
+.join-heading,.join-subheading{font-size:28px}
+.join-brand{font-size:20px;color:#d4af37;margin-top:6px}
+.join-divider{width:180px;height:2px;background:linear-gradient(90deg,transparent,#d4af37,transparent);margin:22px auto}
+.join-interest-card p{color:#ddd;line-height:1.7}
+@media(max-width:768px){
+.join-interest-card{padding:30px 18px}
+.join-count{font-size:50px}
+.join-heading,.join-subheading{font-size:22px}
+}
+
+#visitorCounter,#joinCounter{transition:.35s;}
