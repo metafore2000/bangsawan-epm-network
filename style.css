@@ -845,14 +845,19 @@ button:hover, a.btn:hover, .cta:hover {
 }
 .contact-container{
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
+    text-align:center;
     gap:35px;
-    flex-wrap:wrap;
 }
 .contact-logo img{
-    width:150px;
+    width:180px;
     height:auto;
+}
+.contact-content{
+    text-align:center;
+    max-width:700px;
 }
 .contact-content h2{
     color:#d4af37;
@@ -1809,3 +1814,12 @@ text-align:center;transition:.35s}
 }
 
 #visitorCounter,#joinCounter{transition:.35s;}
+.footer-hashtags{
+    text-align:center;
+    padding:15px 20px;
+    margin-bottom:20px;
+    color:#d4af37;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:1px;
+}
