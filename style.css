@@ -733,8 +733,8 @@ END PHASE1 DISABLE */
 
 .benefit-icon{
     display:block;
-    width:64px;
-    height:64px;
+    width:150px;
+    height:150px;
     object-fit:contain;
     margin:0 auto 20px;
 }

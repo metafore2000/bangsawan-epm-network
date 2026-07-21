@@ -134,43 +134,42 @@ gtag('config', 'G-F0TDG86D8Z');
 <div class="benefit-card">
 <img alt="Daftar Percuma" class="benefit-icon" src="images/icons/daftar-percuma.png"/>
 <h3 id="b1">Daftar Percuma</h3>
-<p>
-        Tiada yuran pendaftaran.<br/>
-        Terus mula belajar dan menjana pendapatan.
-    </p>
-</div> <div class="benefit-card">
+<p id="b1Desc">
+    Tiada yuran pendaftaran.<br/>
+    Terus mula belajar dan menjana pendapatan.
+</p></div> <div class="benefit-card">
 <img alt="Produk Berkualiti" class="benefit-icon" src="images/icons/produk-berkualiti.png"/>
 <h3 id="b2">Produk Berkualiti</h3>
-<p>
+<p id="b2Desc">
     Produk berkualiti tinggi dengan permintaan yang konsisten.
 </p>
 </div>
 <div class="benefit-card">
 <img alt="Group Support" class="benefit-icon" src="images/icons/group-support.png"/>
 <h3 id="b3">Bimbingan &amp; Group Support</h3>
-<p>
-    Bimbingan langkah demi langkah serta sokongan komuniti yang aktif.
+<p id="b3Desc">
+        Bimbingan langkah demi langkah serta sokongan komuniti yang aktif.
 </p>
 </div>
 <div class="benefit-card">
 <img alt="Bahan Promosi" class="benefit-icon" src="images/icons/bahan-promosi.png"/>
 <h3 id="b4">Bahan Promosi</h3>
-<p>
-    Poster, video dan bahan pemasaran disediakan untuk memudahkan promosi.
+<p id="b4Desc">
+        Poster, video dan bahan pemasaran disediakan untuk memudahkan promosi.
 </p>
 </div>
 <div class="benefit-card">
 <img alt="Tiada Simpan Stok" class="benefit-icon" src="images/icons/tiada-simpan-stok.png"/>
 <h3 id="b5">Tiada Simpan Stok</h3>
-<p>
-    Fokus menjual tanpa perlu menyimpan atau menguruskan stok produk.
+<p id="b5Desc">
+        Fokus menjual tanpa perlu menyimpan atau menguruskan stok produk.
 </p>
 </div>
 <div class="benefit-card">
 <img alt="Potensi Pendapatan" class="benefit-icon" src="images/icons/potensi-pendapatan.png"/>
 <h3 id="b6">Potensi Pendapatan</h3>
-<p>
-    Nikmati peluang menjana pendapatan lumayan mengikut usaha anda.
+<p id="b6Desc">
+        Nikmati peluang menjana pendapatan lumayan mengikut usaha anda.
 </p>
 </div>
 </div>
@@ -216,11 +215,14 @@ gtag('config', 'G-F0TDG86D8Z');
 <section class="visitor-section" id="visitor">
 <div class="container visitor-container">
 <div class="visitor-card">
-<div class="visitor-eye">👁</div>
+<div class="visitor-eye">👀</div>
 <div class="visitor-number" id="visitorCounter">2,487</div>
-<div class="visitor-title">Jumlah Paparan Website</div>
+<div class="visitor-title" id="visitorTitle">Jumlah Paparan Website</div>
 <div class="visitor-line"></div>
-<p>Terima kasih kerana melawat<br/>Bangsawan EPM Network</p>
+<p id="visitorDesc">
+Terima kasih kerana melawat<br/>
+Bangsawan EPM Network
+</p>
 </div>
 </div>
 </section>
@@ -391,7 +393,7 @@ gtag('config', 'G-F0TDG86D8Z');
 <div id="hashtagPopup" class="hashtag-popup">
     <div class="hashtag-box">
 
-        <h3>Pilih Platform</h3>
+<h3 id="popupTitle">Pilih Platform</h3>
 
 <button onclick="openHashtag('google')">
     <img src="images/icons/google.png" alt="Google">
@@ -418,8 +420,7 @@ gtag('config', 'G-F0TDG86D8Z');
     <span>YouTube</span>
 </button>
 
-        <button onclick="closeHashtagPopup()">❌ Tutup</button>
-
+<button id="popupCloseBtn" onclick="closeHashtagPopup()">❌ Tutup</button>
     </div>
 
 </div>
@@ -488,15 +489,27 @@ document.addEventListener("keydown", function(e){
         heroTitle: "Bina Pendapatan<br><span>Tanpa Modal</span>",
         heroDesc: "Platform affiliate premium dengan komisen tinggi. Sertai sekarang dan mulakan bisnes tanpa modal.",
         heroBtn: "🚀 CARA DAFTAR",
-        nav: ["HOME", "KELEBIHAN", "PRODUK", "TESTIMONI", "FAQ"]
-      },
+        popupTitle: "Pilih Platform",
+popupClose: "❌ Tutup",
+nav: ["HOME", "KELEBIHAN", "PRODUK", "TESTIMONI", "FAQ"],
+
+visitor: {
+    title: "Jumlah Paparan Website",
+    desc: "Terima kasih kerana melawat<br>Bangsawan EPM Network"
+}      },
       en: {
         heroBadge: "#1 Premium Affiliate",
         heroTitle: "Build Your Income<br><span>Without Capital</span>",
         heroDesc: "Premium affiliate platform with high commissions. Join today and start your business without capital.",
         heroBtn: "🚀 HOW TO JOIN",
-        nav: ["HOME", "BENEFITS", "PRODUCTS", "TESTIMONIALS", "FAQ"]
-      }
+        popupTitle: "Choose Platform",
+popupClose: "❌ Close",
+nav: ["HOME", "BENEFITS", "PRODUCTS", "TESTIMONIALS", "FAQ"],
+
+visitor: {
+    title: "Website Views",
+    desc: "Thank you for visiting<br>Bangsawan EPM Network"
+}      }
     };
 
     function setLang(lang) {
@@ -506,6 +519,13 @@ document.addEventListener("keydown", function(e){
       if (byId("heroTitle")) byId("heroTitle").innerHTML = d.heroTitle;
       if (byId("heroDesc")) byId("heroDesc").innerHTML = d.heroDesc;
       if (byId("heroBtn")) byId("heroBtn").innerHTML = d.heroBtn;
+      if (byId("popupTitle")) byId("popupTitle").textContent = d.popupTitle;
+if (byId("popupCloseBtn")) byId("popupCloseBtn").textContent = d.popupClose;
+if (byId("visitorTitle"))
+    byId("visitorTitle").innerHTML = d.visitor.title;
+
+if (byId("visitorDesc"))
+    byId("visitorDesc").innerHTML = d.visitor.desc;
       document.querySelectorAll("nav a").forEach((a, i) => {
         if (d.nav[i]) a.textContent = d.nav[i];
       });
@@ -519,35 +539,73 @@ document.addEventListener("keydown", function(e){
 
 
     // Benefits translation
-    T.bm.benefits = {
-      title: "Kenapa Ramai Pilih Bangsawan EPM?",
-      desc: "Platform affiliate premium untuk membantu anda menjana pendapatan tanpa perlu menyimpan stok.",
-      cards: ["Daftar Percuma", "Produk Berkualiti", "Bimbingan & Group Support", "Bahan Promosi", "Tiada Simpan Stok", "Potensi Pendapatan"],
-      btn: "Cara Daftar"
-    };
-    T.en.benefits = {
-      title: "Why Choose Bangsawan EPM?",
-      desc: "A premium affiliate platform that helps you earn income without keeping inventory.",
-      cards: ["Free Registration", "Quality Products", "Training & Group Support", "Marketing Materials", "No Inventory Needed", "High Income Potential"],
-      btn: "How to Join"
-    };
-
-    const _oldSetLang = setLang;
-setLang = function (lang) {
-  _oldSetLang(lang);
-  const b = T[lang] && T[lang].benefits;
-  if (!b) return;
-  const ids = ["b1","b2","b3","b4","b5","b6"];
-  document.getElementById("benefitsTitle")?.replaceChildren(document.createTextNode(b.title));
-  document.getElementById("benefitsDesc")?.replaceChildren(document.createTextNode(b.desc));
-  ids.forEach((id,i)=>{
-    const e=document.getElementById(id);
-    if(e) e.textContent=b.cards[i]||"";
-  });
-  const btn=document.getElementById("benefitsBtn");
-  if(btn) btn.textContent=b.btn;
+T.bm.benefits = {
+  title: "Kenapa Ramai Pilih Bangsawan EPM?",
+  desc: "Platform affiliate premium untuk membantu anda menjana pendapatan tanpa perlu menyimpan stok.",
+  cards: [
+    "Daftar Percuma",
+    "Produk Berkualiti",
+    "Bimbingan & Group Support",
+    "Bahan Promosi",
+    "Tiada Simpan Stok",
+    "Potensi Pendapatan"
+  ],
+  cardDesc: [
+    "Tiada yuran pendaftaran.<br>Terus mula belajar dan menjana pendapatan.",
+    "Produk berkualiti tinggi dengan permintaan yang konsisten.",
+    "Bimbingan langkah demi langkah serta sokongan komuniti yang aktif.",
+    "Poster, video dan bahan pemasaran disediakan untuk memudahkan promosi.",
+    "Fokus menjual tanpa perlu menyimpan atau menguruskan stok produk.",
+    "Nikmati peluang menjana pendapatan lumayan mengikut usaha anda."
+  ],
+  btn: "Cara Daftar"
 };
 
+T.en.benefits = {
+  title: "Why Choose Bangsawan EPM?",
+  desc: "A premium affiliate platform that helps you earn income without keeping inventory.",
+  cards: [
+    "Free Registration",
+    "Quality Products",
+    "Training & Group Support",
+    "Marketing Materials",
+    "No Inventory Needed",
+    "High Income Potential"
+  ],
+  cardDesc: [
+    "No registration fee.<br>Start learning and earning immediately.",
+    "High quality products with consistent demand.",
+    "Step-by-step guidance and active community support.",
+    "Posters, videos and marketing materials are provided to help your promotion.",
+    "Focus on selling without storing or managing inventory.",
+    "Enjoy the opportunity to earn attractive income based on your effort."
+  ],
+  btn: "How to Join"
+    };
+
+const _oldSetLang = setLang;
+
+setLang = function (lang) {
+
+  _oldSetLang(lang);
+
+  const b = T[lang].benefits;
+
+  document.getElementById("benefitsTitle").textContent = b.title;
+
+  document.getElementById("benefitsDesc").textContent = b.desc;
+
+  for (let i = 1; i <= 6; i++) {
+
+    document.getElementById("b" + i).textContent = b.cards[i - 1];
+
+    document.getElementById("b" + i + "Desc").innerHTML = b.cardDesc[i - 1];
+
+  }
+
+  document.getElementById("benefitsBtn").textContent = b.btn;
+
+};
 
     T.bm.headerBtn = "DAFTAR SEKARANG";
     T.en.headerBtn = "JOIN NOW";
@@ -726,6 +784,19 @@ setLang = function(lang) {
       joinDesc.textContent = j.desc;
       ["join1", "join2", "join3", "join4"].forEach((id, i) => document.getElementById(id).textContent = j.cards[i]);
       joinBtn.textContent = j.btn;
+      if (lang === "bm") {
+    document.querySelector(".join-heading").textContent = "RAMAI BERMINAT";
+    document.querySelector(".join-subheading").textContent = "MENYERTAI";
+    document.querySelector(".join-brand").textContent = "BANGSAWAN EPM";
+    document.querySelector(".join-interest-card p").innerHTML =
+        "Anda mungkin menjadi<br>ahli seterusnya hari ini.";
+} else {
+    document.querySelector(".join-heading").textContent = "MANY PEOPLE";
+    document.querySelector(".join-subheading").textContent = "ARE JOINING";
+    document.querySelector(".join-brand").textContent = "BANGSAWAN EPM";
+    document.querySelector(".join-interest-card p").innerHTML =
+        "You could be<br>the next member today.";
+}
 
       const c = T[lang].contact;
       contactTitle.textContent = c.title;
