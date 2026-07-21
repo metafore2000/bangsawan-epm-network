@@ -367,10 +367,89 @@ gtag('config', 'G-F0TDG86D8Z');
 </section>
 
 <div class="footer-hashtags">
-#BangsawanEPM &nbsp; • &nbsp; #BangsaEPM
+
+<div class="hashtag-title">
+    🏆 Official Network Hashtags
 </div>
 
+    <a href="#" onclick="showHashtagPopup('BangsawanEPM'); return false;">
+        #BangsawanEPM
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="#" onclick="showHashtagPopup('BangsaEPM'); return false;">
+        #BangsaEPM
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="#" onclick="showHashtagPopup('BangsawanEPMNetwork'); return false;">
+        #BangsawanEPMNetwork
+    </a>
+
+<div id="hashtagPopup" class="hashtag-popup">
+    <div class="hashtag-box">
+
+        <h3>Pilih Platform</h3>
+
+        <button onclick="openHashtag('google')">🌐 Google</button>
+
+        <button onclick="openHashtag('facebook')">📘 Facebook</button>
+
+        <button onclick="openHashtag('tiktok')">🎵 TikTok</button>
+
+        <button onclick="openHashtag('instagram')">📸 Instagram</button>
+
+        <button onclick="openHashtag('youtube')">▶️ YouTube</button>
+
+        <button onclick="closeHashtagPopup()">❌ Tutup</button>
+
+    </div>
+
+</div>
 <script>
+  let currentHashtag = "";
+
+function showHashtagPopup(tag){
+    currentHashtag = tag;
+    document.getElementById("hashtagPopup").style.display = "flex";
+}
+
+function closeHashtagPopup(){
+    document.getElementById("hashtagPopup").style.display = "none";
+}
+
+function openHashtag(platform){
+
+    let url = "";
+
+    switch(platform){
+
+        case "google":
+            url = "https://www.google.com/search?q=%23"+currentHashtag;
+            break;
+
+        case "facebook":
+            url = "https://www.facebook.com/hashtag/"+currentHashtag;
+            break;
+
+        case "instagram":
+            url = "https://www.instagram.com/explore/tags/"+currentHashtag+"/";
+            break;
+
+        case "tiktok":
+            url = "https://www.tiktok.com/tag/"+currentHashtag;
+            break;
+
+        case "youtube":
+            url = "https://www.youtube.com/results?search_query=%23"+currentHashtag;
+            break;
+    }
+
+    window.open(url,"_blank");
+    closeHashtagPopup();
+}
     const T = {
       bm: {
         heroBadge: "#1 Affiliate Premium",
