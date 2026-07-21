@@ -393,15 +393,30 @@ gtag('config', 'G-F0TDG86D8Z');
 
         <h3>Pilih Platform</h3>
 
-        <button onclick="openHashtag('google')">🌐 Google</button>
+<button onclick="openHashtag('google')">
+    <img src="images/icons/google.png" alt="Google">
+    <span>Google</span>
+</button>
 
-        <button onclick="openHashtag('facebook')">📘 Facebook</button>
+<button onclick="openHashtag('facebook')">
+    <img src="images/icons/facebook.png" alt="Facebook">
+    <span>Facebook</span>
+</button>
 
-        <button onclick="openHashtag('tiktok')">🎵 TikTok</button>
+<button onclick="openHashtag('tiktok')">
+    <img src="images/icons/tiktok.png" alt="TikTok">
+    <span>TikTok</span>
+</button>
 
-        <button onclick="openHashtag('instagram')">📸 Instagram</button>
+<button onclick="openHashtag('instagram')">
+    <img src="images/icons/instagram.png" alt="Instagram">
+    <span>Instagram</span>
+</button>
 
-        <button onclick="openHashtag('youtube')">▶️ YouTube</button>
+<button onclick="openHashtag('youtube')">
+    <img src="images/icons/youtube.png" alt="YouTube">
+    <span>YouTube</span>
+</button>
 
         <button onclick="closeHashtagPopup()">❌ Tutup</button>
 
@@ -419,7 +434,15 @@ function showHashtagPopup(tag){
 function closeHashtagPopup(){
     document.getElementById("hashtagPopup").style.display = "none";
 }
+document.getElementById("hashtagPopup").addEventListener("click", function(e){
 
+    if(e.target === this){
+
+        closeHashtagPopup();
+
+    }
+
+});
 function openHashtag(platform){
 
     let url = "";
@@ -450,6 +473,15 @@ function openHashtag(platform){
     window.open(url,"_blank");
     closeHashtagPopup();
 }
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        closeHashtagPopup();
+
+    }
+
+});
     const T = {
       bm: {
         heroBadge: "#1 Affiliate Premium",
