@@ -1769,9 +1769,12 @@ margin-right:4px;
     transition:.30s ease;
 }
 .share-box a span,
-.share-box button span{
-flex:none;
-text-align:center;}
+.share-box button span {
+    flex: none;
+    text-align: center;
+    color: #ffffff;
+  
+}
 @media(max-width:768px){
 .share-box{
 width:min(310px,90%);
