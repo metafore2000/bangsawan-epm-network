@@ -899,21 +899,84 @@ copyLink.onclick=async()=>{
 popup.addEventListener("click",(e)=>{if(e.target===popup)closePopup();});
 });
 </script>
-<script>
-async function hit(ns,key,id){
-try{
-const r=await fetch(`https://api.countapi.xyz/hit/${ns}/${key}`);
-const d=await r.json();
-const e=document.getElementById(id);
-if(e)e.textContent=Number(d.value).toLocaleString();
-}catch(err){console.log(err);}
-}
-document.addEventListener('DOMContentLoaded',()=>{
-hit('bangsawan-epm-network','visitor','visitorCounter');
-document.querySelectorAll('#joinBtn,#headerBtn,#heroBtn,#testiBtn').forEach(b=>b.addEventListener('click',()=>hit('bangsawan-epm-network','join','joinCounter')));
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+getDatabase,
+ref,
+runTransaction,
+onValue
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyAzZz38XBfv-ncFZxCP70pbth5XBI4TD3E",
+
+authDomain: "bangsawan-epm-network.firebaseapp.com",
+
+databaseURL: "https://bangsawan-epm-network-default-rtdb.asia-southeast1.firebasedatabase.app",
+
+projectId: "bangsawan-epm-network",
+
+storageBucket: "bangsawan-epm-network.firebasestorage.app",
+
+messagingSenderId: "926820032864",
+
+appId: "1:926820032864:web:fd3160a9e4ddd1dd303e05"
+
+};
+
+const app = initializeApp(firebaseConfig);
+
+const db = getDatabase(app);
+
+const visitorRef = ref(db,"counter/visitor");
+
+const joinRef = ref(db,"counter/join");
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+runTransaction(visitorRef,(value)=>{
+
+return (value||0)+1;
+
 });
-</script>
-<audio autoplay="" id="bgMusic" loop="">
+
+onValue(visitorRef,(snapshot)=>{
+
+document.getElementById("visitorCounter").textContent=
+(snapshot.val()||0).toLocaleString();
+
+});
+
+onValue(joinRef,(snapshot)=>{
+
+document.getElementById("joinCounter").textContent=
+(snapshot.val()||0).toLocaleString();
+
+});
+
+document.querySelectorAll("#joinBtn,#headerBtn,#heroBtn,#testiBtn")
+
+.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+runTransaction(joinRef,(value)=>{
+
+return (value||0)+1;
+
+});
+
+});
+
+});
+
+});
+
+</script><audio autoplay="" id="bgMusic" loop="">
 <source src="audio/background.mp3" type="audio/mpeg"/>
 </audio>
 <script>
