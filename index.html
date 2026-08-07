@@ -136,13 +136,13 @@ gtag('config', 'G-F0TDG86D8Z');
 
     <div class="opportunity-header">
 
-        <h2>
-            SATU KEAHLIAN.<br>
+<h2 id="oppTitle">
+                SATU KEAHLIAN.<br>
             <span>EMPAT PELUANG.</span>
         </h2>
 
-        <p>
-            Kenapa hanya menjadi pelanggan sedangkan anda boleh menjadi
+<p id="oppDesc">
+                Kenapa hanya menjadi pelanggan sedangkan anda boleh menjadi
             <strong>Ahli Bangsawan EPM?</strong>
         </p>
 
@@ -158,17 +158,17 @@ gtag('config', 'G-F0TDG86D8Z');
     <img src="images/icons/icon-cart.png" alt="Beli Harga Ahli">
 </div>
 
-<h3>
-BELI PADA<br>
+<h3 id="opp1Title">
+    BELI PADA<br>
 HARGA AHLI
 </h3>
 
-<h4 class="subtitle">
-JIMAT SETIAP KALI MEMBELI
+<h4 class="subtitle" id="opp1Sub">
+    JIMAT SETIAP KALI MEMBELI
 </h4>
 
-<p>
-Nikmati harga ahli yang lebih rendah<br>
+<p id="opp1Desc">
+    Nikmati harga ahli yang lebih rendah<br>
 untuk kegunaan sendiri<br>
 atau keluarga.
 </p>
@@ -186,18 +186,18 @@ atau keluarga.
     <img src="images/icons/icon-money.png" alt="Jual & Jana Komisen">
 </div>
 
-<h3>
-JUAL & NIKMATI<br>
+<h3 id="opp2Title">
+    JUAL & NIKMATI<br>
 KEUNTUNGAN
 </h3>
 
-<h4 class="subtitle">
-TUKAR PEMBELIAN<br>
+<h4 class="subtitle" id="opp2Sub">
+    TUKAR PEMBELIAN<br>
 MENJADI PENDAPATAN
 </h4>
 
-<p>
-Jual kepada pelanggan dan nikmati<br>
+<p id="opp2Desc">
+    Jual kepada pelanggan dan nikmati<br>
 potensi keuntungan sehingga<br>
 <strong>100%</strong> daripada setiap jualan.
 </p>
@@ -215,15 +215,15 @@ potensi keuntungan sehingga<br>
     <img src="images/icons/icon-team.png" alt="Bina Team">
 </div>
 
-<h3>BINA TEAM<br>JUALAN</h3>
-
-<h4 class="subtitle">
-BUAT DUIT BERSAMA,<br>
+<h3 id="opp3Title">BINA TEAM<br>JUALAN</h3>
+`
+<h4 class="subtitle" id="opp3Sub">
+    BUAT DUIT BERSAMA,<br>
 BUKAN BERSENDIRIAN
 </h4>
 
-    <p>
-        Bimbing ahli baharu dan bina
+<p id="opp3Desc">
+            Bimbing ahli baharu dan bina
         rangkaian yang semakin berkembang.
     </p>
 
@@ -240,15 +240,15 @@ BUKAN BERSENDIRIAN
     <img src="images/icons/icon-crown.png" alt="Bonus & Ganjaran">
 </div>
 
-<h3>BINA LEADER<br>MASA DEPAN</h3>
+<h3 id="opp4Title">BINA LEADER<br>MASA DEPAN</h3>
 
-<h4 class="subtitle">
-BIMBING, LAHIRKAN,<br>
+<h4 class="subtitle" id="opp4Sub">
+    BIMBING, LAHIRKAN,<br>
 DAN KEMBANGKAN LEADER
 </h4>
 
-    <p>
-Lahirkan leader yang mampu
+<p id="opp4Desc">
+    Lahirkan leader yang mampu
 membina team sendiri dan terus
 mengembangkan rangkaian.
     </p>
@@ -344,8 +344,32 @@ mengembangkan rangkaian.
 <h2 id="testiTitle">Bukti &amp; Testimoni Sebenar Ahli Bangsawan EPM</h2>
 <p id="testiDesc">Lihat sendiri pengalaman, transaksi dan maklum balas daripada mereka yang telah bermula bersama
         kami.</p>
-<div class="testi-single">
-<img alt="Bukti dan Testimoni Sebenar Bangsawan EPM" loading="lazy" src="images/testimoni/testimoni-bukti.png"/>
+<div class="testi-viewer">
+
+    <button class="testi-arrow testi-prev">
+        &#10094;
+    </button>
+
+    <div class="testi-frame">
+
+        <img
+            id="testiImage"
+            src="images/testimoni/t1.jpg"
+            alt="Bukti Testimoni"
+            loading="lazy">
+
+    </div>
+
+    <button class="testi-arrow testi-next">
+        &#10095;
+    </button>
+
+</div>
+
+<div class="testi-counter">
+
+<span id="testiCurrent">1</span> /
+<span id="testiTotal">0</span>
 </div>
 <a class="hero-btn" href="#daftar" id="testiBtn">CARA DAFTAR</a>
 </div>
@@ -699,6 +723,68 @@ T.bm.benefits = {
   btn: "Cara Daftar"
 };
 
+T.bm.opportunity = {
+  title: "SATU KEAHLIAN.<br><span>EMPAT PELUANG.</span>",
+  desc: "Kenapa hanya menjadi pelanggan sedangkan anda boleh menjadi <strong>Ahli Bangsawan EPM?</strong>",
+  cards: [
+    {
+      title:"BELI PADA<br>HARGA AHLI",
+      sub:"JIMAT SETIAP KALI MEMBELI",
+desc:"Nikmati harga ahli yang lebih rendah<br>untuk kegunaan sendiri<br>atau keluarga.",
+footer:"✔ LEBIH JIMAT, LEBIH BERBALOI"
+    },
+    {
+      title:"JUAL & NIKMATI<br>KEUNTUNGAN",
+      sub:"TUKAR PEMBELIAN<br>MENJADI PENDAPATAN",
+desc:"Jual kepada pelanggan dan nikmati<br>potensi keuntungan sehingga<br><strong>100%</strong> daripada setiap jualan.",
+footer:"✔ KOMISEN DIBAYAR SETIAP JUALAN"
+    },
+    {
+      title:"BINA TEAM<br>JUALAN",
+      sub:"BUAT DUIT BERSAMA,<br>BUKAN BERSENDIRIAN",
+desc:"Bimbing ahli baharu dan bina<br>rangkaian yang semakin berkembang.",
+footer:"✔ BINA PASUKAN YANG KUKUH"
+    },
+    {
+      title:"BINA LEADER<br>MASA DEPAN",
+      sub:"BIMBING, LAHIRKAN,<br>DAN KEMBANGKAN LEADER",
+desc:"Lahirkan leader yang mampu<br>membina team sendiri dan terus<br>mengembangkan rangkaian.",
+footer:"✔ LEADER HEBAT, LEGASI BERMAKNA"
+    }
+  ]
+};
+
+T.en.opportunity = {
+  title: "ONE MEMBERSHIP.<br><span>FOUR OPPORTUNITIES.</span>",
+  desc: "Why remain just a customer when you can become a <strong>Bangsawan EPM Member?</strong>",
+  cards: [
+    {
+      title:"BUY AT<br>MEMBER PRICE",
+      sub:"SAVE ON EVERY PURCHASE",
+desc:"Enjoy exclusive member pricing<br>for yourself<br>and your family.",
+footer:"✔ SAVE MORE, EARN MORE VALUE"
+    },
+    {
+      title:"SELL & EARN<br>PROFIT",
+      sub:"TURN PURCHASES<br>INTO INCOME",
+desc:"Sell to customers and enjoy<br>profit potential of up to<br><strong>100%</strong> on every sale.",
+footer:"✔ COMMISSION ON EVERY SALE"
+    },
+    {
+      title:"BUILD A<br>SALES TEAM",
+      sub:"EARN TOGETHER,<br>NOT ALONE",
+desc:"Guide new members and build<br>a growing sales network.",
+footer:"✔ BUILD A STRONG SALES TEAM"
+    },
+    {
+      title:"BUILD<br>FUTURE LEADERS",
+      sub:"MENTOR,<br>DEVELOP LEADERS",
+desc:"Develop leaders who can build<br>their own teams and expand<br>the network.",
+footer:"✔ GREAT LEADERS, LASTING LEGACY"
+    }
+  ]
+};
+
 T.en.benefits = {
   title: "Why Choose Bangsawan EPM?",
   desc: "A premium affiliate platform that helps you earn income without keeping inventory.",
@@ -744,7 +830,29 @@ setLang = function (lang) {
   document.getElementById("benefitsBtn").textContent = b.btn;
 
 };
+const __opportunityPrev = setLang;
 
+setLang = function(lang){
+
+    __opportunityPrev(lang);
+
+    const o = T[lang].opportunity;
+
+    document.getElementById("oppTitle").innerHTML = o.title;
+
+    document.getElementById("oppDesc").innerHTML = o.desc;
+
+    for(let i=1;i<=4;i++){
+
+        document.getElementById("opp"+i+"Title").innerHTML = o.cards[i-1].title;
+
+        document.getElementById("opp"+i+"Sub").innerHTML = o.cards[i-1].sub;
+
+        document.getElementById("opp"+i+"Desc").innerHTML = o.cards[i-1].desc;
+document.querySelectorAll(".opportunity-footer")[i-1].innerHTML = o.cards[i-1].footer;
+    }
+
+};
     T.bm.headerBtn = "DAFTAR SEKARANG";
     T.en.headerBtn = "JOIN NOW";
     T.bm.products = {
@@ -1128,5 +1236,9 @@ document.addEventListener("DOMContentLoaded",function(){
  document.addEventListener("touchstart",start,{once:true});
 });
 </script>
+<script>
+
+</script>
+<script src="js/testimonial.js"></script>
 </body>
 </html>
