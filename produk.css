@@ -1,0 +1,1651 @@
+/* =========================================================
+   BANGSAWAN EPM
+   PRODUK PAGE
+   PREMIUM GOLD / BLACK
+========================================================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body{
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212,175,55,.22),
+            rgba(212,175,55,.08) 35%,
+            rgba(9,9,9,.92) 75%
+        ),
+        linear-gradient(
+            180deg,
+            #1b180d 0%,
+            #121109 45%,
+            #090909 100%
+        );
+
+    color:#fff;
+    font-family:Arial,sans-serif;
+    position:relative;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* =========================================================
+   GLOBAL WATERMARK
+========================================================= */
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+    height:900px;
+
+    background:url("images/be-logo.png")
+        center center /
+        contain
+        no-repeat;
+
+    opacity:.075;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    filter:blur(.4px);
+}
+
+
+/* =========================================================
+   FLOATING GOLD PARTICLES
+========================================================= */
+
+.floating-particles{
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+}
+
+.floating-particles span{
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    background:#d4af37;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 12px rgba(212,175,55,.8);
+
+    animation:
+        particle 14s linear infinite;
+}
+
+.floating-particles span:nth-child(1){
+    left:8%;
+    top:90%;
+    animation-delay:0s;
+}
+
+.floating-particles span:nth-child(2){
+    left:22%;
+    top:105%;
+    animation-delay:2s;
+}
+
+.floating-particles span:nth-child(3){
+    left:35%;
+    top:95%;
+    animation-delay:4s;
+}
+
+.floating-particles span:nth-child(4){
+    left:50%;
+    top:110%;
+    animation-delay:1s;
+}
+
+.floating-particles span:nth-child(5){
+    left:64%;
+    top:92%;
+    animation-delay:5s;
+}
+
+.floating-particles span:nth-child(6){
+    left:76%;
+    top:104%;
+    animation-delay:3s;
+}
+
+.floating-particles span:nth-child(7){
+    left:88%;
+    top:98%;
+    animation-delay:6s;
+}
+
+.floating-particles span:nth-child(8){
+    left:94%;
+    top:108%;
+    animation-delay:7s;
+}
+
+@keyframes particle{
+
+    from{
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    85%{
+        opacity:1;
+    }
+
+    to{
+        transform:
+            translateY(-120vh)
+            scale(1.8);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:14px 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.header{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(8,8,8,.85);
+
+    border-bottom:
+        1px solid
+        rgba(212,175,55,.25);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    height:96px;
+
+    width:auto;
+
+    flex-shrink:0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+    display:flex;
+
+    gap:24px;
+
+    align-items:center;
+}
+
+nav a{
+    color:#ddd;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+    position:relative;
+}
+
+nav a:hover,
+nav a.active{
+    color:#d4af37;
+}
+
+
+/* ACTIVE GOLD LINE */
+
+nav a.active::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:-8px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    box-shadow:
+        0 0 8px
+        rgba(212,175,55,.65);
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCH
+========================================================= */
+
+.lang-switch-inline{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin:0 18px;
+    font-weight:700;
+}
+
+.lang-switch-inline button{
+    background:none;
+    border:none;
+    color:#d4af37;
+    cursor:pointer;
+    font-size:14px;
+    padding:0 2px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    background:#d4af37;
+
+    color:#111;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+    display:inline-block;
+}
+
+.cta:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(212,175,55,.25);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle{
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#d4af37;
+
+    font-size:32px;
+
+    cursor:pointer;
+}
+
+.mobile-menu{
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+    position:relative;
+
+    z-index:2;
+
+    padding-top:125px;
+}
+
+
+/* =========================================================
+   PRODUK SECTION
+========================================================= */
+
+.produk-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        70px 20px
+        90px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   PRODUK CONTAINER
+========================================================= */
+
+.produk-section .container{
+    max-width:1100px;
+
+    display:block;
+
+    text-align:center;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   PRODUK HEADER
+========================================================= */
+
+.produk-header{
+    margin-bottom:40px;
+}
+
+.produk-header h1{
+    font-size:52px;
+
+    color:#d4af37;
+
+    margin-bottom:18px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    text-shadow:
+        0 4px 12px
+        rgba(0,0,0,.75);
+}
+
+.produk-header p{
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   PRODUK GRID
+========================================================= */
+
+.produk-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(280px,1fr));
+
+    gap:28px;
+
+    max-width:900px;
+
+    margin:0 auto 42px;
+}
+
+
+/* =========================================================
+   PRODUK CARD
+========================================================= */
+
+.produk-card{
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.30);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.35);
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    transition:
+        .30s ease;
+
+    position:relative;
+}
+
+
+/* GOLD GLOW */
+
+.produk-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    width:45%;
+
+    height:1px;
+
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    opacity:.8;
+}
+
+
+/* HOVER */
+
+.produk-card:hover{
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    border-color:#d4af37;
+
+    box-shadow:
+        0 20px 45px
+        rgba(212,175,55,.22);
+}
+
+
+/* =========================================================
+   PRODUK IMAGE BOX
+========================================================= */
+
+.produk-image{
+    width:100%;
+
+    height:250px;
+
+    background:#111;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+
+    padding:10px;
+}
+
+
+/* IMAGE */
+
+.produk-image img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    display:block;
+
+    transition:
+        transform .35s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.produk-card:hover
+.produk-image img{
+    transform:scale(1.035);
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+========================================================= */
+
+.produk-card h2{
+    color:#fff;
+
+    font-size:30px;
+
+    line-height:1.25;
+
+    font-weight:800;
+
+    margin:0;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   MAIN PRODUCT BUTTON
+========================================================= */
+
+.hero-btn{
+    display:inline-block;
+
+    margin:
+        8px auto 0;
+
+    padding:
+        15px 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d86f,
+            #c99b12
+        );
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:800;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(212,175,55,.30);
+
+    transition:.30s ease;
+}
+
+
+/* BUTTON SHINE */
+
+.hero-btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+}
+
+.hero-btn:hover::before{
+    left:160%;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(212,175,55,.38);
+}
+
+
+/* =========================================================
+   HUBUNGI KAMI
+========================================================= */
+
+.contact-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        70px 20px
+        45px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+.contact-container{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:30px;
+
+    max-width:1000px;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   CONTACT LOGO
+========================================================= */
+
+.contact-logo img{
+    width:180px;
+
+    height:auto;
+
+    display:block;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content{
+    text-align:center;
+
+    max-width:700px;
+}
+
+.contact-content h2{
+    color:#d4af37;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+    font-weight:800;
+}
+
+.contact-content p{
+    color:#fff;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
+.contact-buttons{
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.contact-buttons a{
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   OFFICIAL HASHTAGS
+========================================================= */
+
+.footer-hashtags{
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    padding:
+        20px 20px
+        35px;
+
+    color:#d4af37;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.hashtag-title{
+    margin-bottom:15px;
+
+    color:#d4af37;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.footer-hashtags a{
+    color:#d4af37;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.footer-hashtags a:hover{
+    color:#ffd86b;
+
+    text-shadow:
+        0 0 10px
+        rgba(212,175,55,.6);
+}
+
+
+/* =========================================================
+   HASHTAG POPUP
+========================================================= */
+
+.hashtag-popup{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:100000;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+        rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    animation:
+        popupFade .25s ease;
+}
+
+@keyframes popupFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+.hashtag-box{
+    min-width:340px;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:#0b0b0b;
+
+    border:
+        2px solid
+        #d4af37;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.65),
+
+        0 0 35px
+        rgba(212,175,55,.35);
+
+    animation:
+        popupZoom .28s ease;
+}
+
+@keyframes popupZoom{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.90);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* POPUP TITLE */
+
+.hashtag-box h3{
+    display:block;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    color:#d4af37;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+/* POPUP BUTTONS */
+
+.hashtag-box button{
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:24px;
+
+    padding:13px 18px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.hashtag-box button:hover{
+    background:
+        rgba(212,175,55,.18);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ICON */
+
+.hashtag-box button img{
+    width:30px;
+
+    height:30px;
+
+    object-fit:contain;
+}
+
+
+/* CLOSE */
+
+#popupCloseBtn{
+    margin-top:18px;
+
+    background:
+        transparent;
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    color:#ffd86b;
+}
+
+#popupCloseBtn:hover{
+    background:
+        rgba(212,175,55,.12);
+}
+
+
+/* =========================================================
+   FLOATING SHARE BUTTON
+========================================================= */
+
+.share-fab{
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    z-index:99999;
+}
+
+
+/* MAIN SHARE */
+
+.share-main{
+    width:64px;
+
+    height:64px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d86f,
+            #c99b12
+        );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255,218,90,.95),
+
+        0 0 0 7px
+        rgba(255,218,90,.35),
+
+        0 10px 35px
+        rgba(255,210,60,.45),
+
+        0 0 60px
+        rgba(255,215,0,.25);
+
+    transition:.30s ease;
+}
+
+.share-main:hover{
+    transform:scale(1.08);
+}
+
+
+/* SVG */
+
+
+/* =========================================================
+   SHARE POPUP
+========================================================= */
+
+.share-popup{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(0,0,0,.58);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    z-index:100000;
+
+    animation:
+        shareFade .25s ease;
+}
+
+.share-popup.show{
+    display:flex;
+}
+
+@keyframes shareFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+/* SHARE BOX */
+
+.share-box{
+    width:min(330px,90%);
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,30,30,.96),
+            rgba(12,12,12,.96)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(212,175,55,.18);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    animation:
+        shareScale .25s ease;
+}
+
+@keyframes shareScale{
+
+    from{
+        transform:scale(.92);
+
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+
+        opacity:1;
+    }
+
+}
+
+
+/* SHARE TITLE */
+
+.share-box h3{
+    margin:
+        0 0 6px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#ffd86b;
+}
+
+
+/* SHARE ITEMS */
+
+.share-box a,
+.share-box button{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:
+        14px 16px;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    font-size:20px;
+
+    text-decoration:none;
+
+    border:none;
+
+    transition:.25s;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0,0,0,.95),
+
+        0 0 8px
+        rgba(0,0,0,.45);
+}
+
+
+/* SHARE COLORS */
+
+#shareWA{
+    background:#25D366;
+}
+
+#shareFB{
+    background:#1877F2;
+}
+
+#shareTG{
+    background:#229ED9;
+}
+
+#copyLink{
+    background:#3b3b3b;
+}
+
+#closeShare{
+    background:transparent;
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    color:#ffd86b;
+}
+
+
+/* SHARE HOVER */
+
+.share-box a:hover,
+.share-box button:hover{
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.06);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,0,0,.25);
+}
+
+
+/* SHARE ICONS */
+
+.share-box a img,
+.share-box button img{
+    width:32px;
+
+    height:32px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    margin-right:4px;
+
+    filter:
+        drop-shadow(
+            0 2px 4px
+            rgba(0,0,0,.55)
+        )
+
+        drop-shadow(
+            0 0 4px
+            rgba(255,255,255,.18)
+        );
+
+    transition:.30s ease;
+}
+
+.share-box a span,
+.share-box button span{
+    flex:none;
+
+    text-align:center;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+    .produk-grid{
+        grid-template-columns:1fr;
+        max-width:600px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    /* BODY WATERMARK */
+
+    body::before{
+        width:340px;
+
+        height:340px;
+
+        opacity:.055;
+    }
+
+
+    /* HEADER */
+
+    .header .container{
+        position:relative;
+
+        justify-content:space-between;
+
+        align-items:center;
+    }
+
+
+    .logo{
+        height:70px;
+    }
+
+
+    /* MENU BUTTON */
+
+    .menu-toggle{
+        display:block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu{
+        display:none;
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:#111;
+
+        padding:20px;
+
+        box-sizing:border-box;
+
+        flex-direction:column;
+
+        z-index:9999;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+    }
+
+
+    .mobile-menu nav{
+        display:flex;
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:0;
+    }
+
+    .mobile-menu nav a{
+        padding:12px 0;
+
+        text-align:center;
+    }
+
+
+    .mobile-menu .cta{
+        width:100%;
+
+        text-align:center;
+    }
+
+
+    .lang-switch-inline{
+        justify-content:center;
+    }
+
+
+    /* MAIN */
+
+    main{
+        padding-top:100px;
+    }
+
+
+    /* PRODUK */
+
+    .produk-section{
+        padding:
+            55px 15px
+            70px;
+    }
+
+
+    .produk-header h1{
+        font-size:38px;
+    }
+
+
+    .produk-header p{
+        font-size:17px;
+
+        line-height:1.6;
+    }
+
+
+    .produk-grid{
+        grid-template-columns:1fr;
+
+        max-width:420px;
+
+        gap:20px;
+
+        margin-bottom:35px;
+    }
+
+
+    .produk-card{
+        padding:16px;
+
+        border-radius:20px;
+    }
+
+
+    .produk-image{
+        height:220px;
+
+        border-radius:14px;
+    }
+
+
+    .produk-card h2{
+        font-size:24px;
+    }
+
+
+    /* BUTTON */
+
+    .hero-btn{
+        font-size:16px;
+
+        padding:
+            14px 24px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section{
+        padding:
+            55px 15px
+            35px;
+    }
+
+
+    .contact-content h2{
+        font-size:30px;
+    }
+
+
+    .contact-content p{
+        font-size:17px;
+    }
+
+
+    .contact-buttons{
+        flex-direction:column;
+
+        width:100%;
+
+        gap:14px;
+    }
+
+
+    .contact-buttons a{
+        width:100%;
+
+        text-align:center;
+    }
+
+
+    /* HASHTAGS */
+
+    .footer-hashtags{
+        font-size:14px;
+
+        line-height:2;
+    }
+
+    .hashtag-title{
+        font-size:22px;
+    }
+
+
+    /* HASHTAG POPUP */
+
+    .hashtag-box{
+        min-width:0;
+
+        width:
+            min(92%,360px);
+
+        padding:22px;
+    }
+
+
+    .hashtag-box h3{
+        font-size:22px;
+    }
+
+
+    /* SHARE */
+
+    .share-fab{
+        right:15px;
+
+        bottom:15px;
+    }
+
+    .share-main{
+        width:56px;
+
+        height:56px;
+    }
+
+    /* SHARE POPUP */
+
+    .share-box{
+        width:
+            min(310px,90%);
+
+        padding:18px;
+    }
+
+    .share-box a,
+    .share-box button{
+        padding:
+            12px 16px;
+
+        font-size:16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+    .produk-header h1{
+        font-size:34px;
+    }
+
+    .produk-image{
+        height:200px;
+    }
+
+    .produk-card h2{
+        font-size:22px;
+    }
+
+    .hero-btn{
+        width:100%;
+
+        text-align:center;
+    }
+
+}

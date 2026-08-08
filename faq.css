@@ -1,0 +1,2377 @@
+/* =========================================================
+   BANGSAWAN EPM
+   FAQ.CSS
+   FULL PAGE STYLE
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --gold:#d4af37;
+    --gold-light:#ffd86b;
+    --gold-dark:#9d7714;
+
+    --black:#050505;
+    --black-2:#090909;
+    --black-3:#111111;
+
+    --white:#ffffff;
+    --text:#eeeeee;
+    --muted:#cfcfcf;
+
+    --border:rgba(212,175,55,.28);
+
+    --container:1200px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    min-height:100%;
+}
+
+body{
+    min-height:100%;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212,175,55,.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,215,120,.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(212,175,55,.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #0b0b0b 45%,
+            #050505 100%
+        );
+
+    color:var(--white);
+    font-family:Arial,Helvetica,sans-serif;
+
+    overflow-x:hidden;
+
+    position:relative;
+}
+
+img,
+video,
+iframe{
+    max-width:100%;
+    height:auto;
+}
+
+button,
+a{
+    font-family:inherit;
+}
+
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================================================
+   GLOBAL BACKGROUND GRID
+========================================================= */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 159px,
+            rgba(212,175,55,.025) 160px,
+            transparent 161px
+        );
+
+    opacity:.45;
+
+    z-index:-2;
+}
+
+
+/* =========================================================
+   PREMIUM WATERMARK
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+    height:900px;
+
+    background:
+        url("images/be-logo.png")
+        center center /
+        contain
+        no-repeat;
+
+    opacity:.075;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    filter:blur(.4px);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+
+    width:100%;
+
+    max-width:var(--container);
+
+    margin:0 auto;
+
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
+
+.floating-particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:0;
+}
+
+.floating-particles span{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    background:var(--gold);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 12px
+        rgba(212,175,55,.8);
+
+    animation:
+        particle 14s linear infinite;
+}
+
+.floating-particles span:nth-child(1){
+    left:8%;
+    top:90%;
+    animation-delay:0s;
+}
+
+.floating-particles span:nth-child(2){
+    left:22%;
+    top:105%;
+    animation-delay:2s;
+}
+
+.floating-particles span:nth-child(3){
+    left:35%;
+    top:95%;
+    animation-delay:4s;
+}
+
+.floating-particles span:nth-child(4){
+    left:50%;
+    top:110%;
+    animation-delay:1s;
+}
+
+.floating-particles span:nth-child(5){
+    left:64%;
+    top:92%;
+    animation-delay:5s;
+}
+
+.floating-particles span:nth-child(6){
+    left:76%;
+    top:104%;
+    animation-delay:3s;
+}
+
+.floating-particles span:nth-child(7){
+    left:88%;
+    top:98%;
+    animation-delay:6s;
+}
+
+.floating-particles span:nth-child(8){
+    left:94%;
+    top:108%;
+    animation-delay:7s;
+}
+
+@keyframes particle{
+
+    from{
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    85%{
+        opacity:1;
+    }
+
+    to{
+        transform:
+            translateY(-120vh)
+            scale(1.8);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   NAVBAR — DESIGN MASTER INDEX
+   DESIGN SAHAJA
+========================================================= */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:rgba(8,8,8,.97);
+    backdrop-filter:none;
+    border-bottom:1px solid rgba(212,175,55,.25);
+}
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.header .container,
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    height:96px;
+    width:auto;
+    flex-shrink:0;
+}
+
+
+/* =========================================================
+   MOBILE MENU WRAPPER
+========================================================= */
+
+.mobile-menu{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+nav{
+    display:flex;
+    gap:24px;
+    align-items:center;
+}
+
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.25s;
+}
+
+/* =========================================================
+   LANGUAGE SWITCH
+========================================================= */
+
+.lang-switch-inline{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.lang-switch-inline button{
+    background:transparent;
+    border:none;
+    padding:0;
+    margin:0;
+    color:var(--gold);
+    font-family:inherit;
+    font-size:16px;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.lang-switch-inline button:hover{
+    color:var(--gold-light);
+}
+
+.lang-switch-inline span{
+    color:#ffffff;
+    font-size:16px;
+}
+
+nav a:hover,
+nav a.active{
+    color:#d4af37;
+}
+
+
+/* =========================================================
+   DAFTAR SEKARANG
+========================================================= */
+
+.cta{
+    background:#d4af37;
+    color:#111;
+    padding:12px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#d4af37;
+    font-size:32px;
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width:768px){
+
+    .header .container,
+    .nav-container{
+        position:relative;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .mobile-menu{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#111;
+        padding:20px;
+        box-sizing:border-box;
+        flex-direction:column;
+        z-index:9999;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+    }
+
+    .mobile-menu nav{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    }
+
+    .mobile-menu nav a{
+        padding:12px 0;
+        text-align:center;
+    }
+
+    .mobile-menu .cta{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+.faq-section{
+
+padding:
+    175px 20px 70px;
+    
+    background:transparent;
+
+    text-align:center;
+}
+
+.faq-container{
+
+    display:block;
+
+    max-width:900px;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   FAQ TITLE
+========================================================= */
+
+.faq-section h1{
+
+    color:var(--gold-light);
+
+    font-size:52px;
+
+    line-height:1.1;
+
+    font-weight:900;
+
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 22px
+        rgba(212,175,55,.16);
+}
+
+.faq-desc{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:#dddddd;
+
+    font-size:20px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.faq-list{
+
+    width:100%;
+
+    max-width:850px;
+
+    margin:42px auto 0;
+
+    text-align:left;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.faq-item{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.25);
+
+    border-radius:20px;
+
+    padding:0;
+
+    margin:16px 0;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.20);
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+
+.faq-item:hover{
+
+    border-color:
+        rgba(212,175,55,.55);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.28);
+}
+
+
+/* =========================================================
+   FAQ SUMMARY
+========================================================= */
+
+.faq-item summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:
+        22px 24px;
+
+    color:#fff;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    line-height:1.45;
+
+    transition:.25s ease;
+
+    user-select:none;
+}
+
+.faq-item summary::-webkit-details-marker{
+
+    display:none;
+}
+
+.faq-item summary::before{
+
+    content:"❓";
+
+    flex:0 0 auto;
+
+    font-size:20px;
+}
+
+.faq-item summary::after{
+
+    content:"⌄";
+
+    margin-left:auto;
+
+    flex:0 0 auto;
+
+    color:var(--gold-light);
+
+    font-size:25px;
+
+    font-weight:700;
+
+    transition:.25s ease;
+}
+
+.faq-item[open] summary{
+
+    color:var(--gold-light);
+
+    background:
+        rgba(212,175,55,.045);
+}
+
+.faq-item[open] summary::after{
+
+    transform:rotate(180deg);
+}
+
+
+/* =========================================================
+   FAQ ANSWER
+========================================================= */
+
+.faq-item p{
+
+    margin:0;
+
+    padding:
+        22px 28px 26px;
+
+    border-top:
+        1px solid
+        rgba(212,175,55,.18);
+
+    color:#eeeeee;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    background:
+        rgba(0,0,0,.12);
+}
+
+.faq-item p b{
+
+    color:var(--gold-light);
+}
+
+
+/* =========================================================
+   DAFTAR SECTION
+========================================================= */
+
+.daftar-section{
+
+    padding:
+        80px 20px 85px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+.daftar-container{
+
+    display:block;
+
+    max-width:1100px;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   DAFTAR TITLE
+========================================================= */
+
+.daftar-section h2{
+
+    color:var(--gold-light);
+
+    font-size:46px;
+
+    line-height:1.15;
+
+    font-weight:900;
+
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 20px
+        rgba(212,175,55,.15);
+}
+
+.section-desc{
+
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+    color:#dddddd;
+
+    font-size:20px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   STEPS GRID
+========================================================= */
+
+.steps-grid{
+
+    width:100%;
+
+    max-width:1000px;
+
+    margin:0 auto 45px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:22px;
+}
+
+
+/* =========================================================
+   STEP CARD
+========================================================= */
+
+.step-card{
+
+    min-height:230px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    text-align:center;
+
+    padding:
+        24px 18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.28);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.22);
+
+    transition:.3s ease;
+}
+
+.step-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 20px 40px
+        rgba(212,175,55,.20);
+}
+
+
+/* =========================================================
+   STEP IMAGE
+========================================================= */
+
+.step-card img{
+
+    width:145px;
+
+    height:145px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 15px;
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(212,175,55,.20)
+        );
+}
+
+
+/* =========================================================
+   STEP TITLE
+========================================================= */
+
+.step-card h3{
+
+    color:#fff;
+
+    font-size:19px;
+
+    line-height:1.35;
+
+    font-weight:800;
+
+    margin:0;
+}
+
+
+/* =========================================================
+   JOIN INTEREST CARD
+========================================================= */
+
+.join-interest-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:
+        55px auto 35px;
+
+    padding:
+        42px 30px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    border-radius:24px;
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.35),
+        0 0 28px
+        rgba(212,175,55,.18);
+
+    transition:.35s ease;
+}
+
+.join-interest-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--gold-light);
+
+    box-shadow:
+        0 26px 55px
+        rgba(0,0,0,.45),
+        0 0 40px
+        rgba(212,175,55,.30);
+}
+
+
+/* =========================================================
+   JOIN ICON
+========================================================= */
+
+.join-icon-premium{
+
+    font-size:54px;
+
+    line-height:1;
+
+    margin-bottom:8px;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(212,175,55,.45)
+        );
+}
+
+
+/* =========================================================
+   JOIN COUNT
+========================================================= */
+
+.join-count{
+
+    font-size:64px;
+
+    line-height:1;
+
+    font-weight:900;
+
+    color:var(--gold-light);
+
+    margin:12px 0 16px;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 20px
+        rgba(212,175,55,.20);
+}
+
+
+/* =========================================================
+   JOIN HEADINGS
+========================================================= */
+
+.join-heading,
+.join-subheading{
+
+    color:#fff;
+
+    font-size:27px;
+
+    line-height:1.2;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.join-brand{
+
+    color:var(--gold);
+
+    font-size:20px;
+
+    line-height:1.3;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-top:7px;
+}
+
+
+/* =========================================================
+   JOIN DIVIDER
+========================================================= */
+
+.join-divider{
+
+    width:180px;
+
+    height:2px;
+
+    margin:
+        22px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   JOIN TEXT
+========================================================= */
+
+.join-interest-card p{
+
+    color:#dddddd;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.cta-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:
+        5px auto 0;
+
+    padding:
+        16px 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
+
+    color:#111;
+
+    border:
+        1px solid
+        rgba(255,216,107,.45);
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    box-shadow:
+        0 12px 30px
+        rgba(212,175,55,.30);
+
+    transition:.25s ease;
+}
+
+.cta-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(212,175,55,.42);
+
+    filter:brightness(1.05);
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section{
+
+    padding:
+        70px 20px 55px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+.contact-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:28px;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   CONTACT LOGO
+========================================================= */
+
+.contact-logo img{
+
+    width:180px;
+
+    height:auto;
+
+    display:block;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(212,175,55,.25)
+        );
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content{
+
+    width:100%;
+
+    max-width:760px;
+
+    text-align:center;
+}
+
+.contact-content h2{
+
+    color:var(--gold-light);
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    font-weight:900;
+
+    margin-bottom:15px;
+}
+
+.contact-content p{
+
+    color:#dddddd;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
+.contact-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+.contact-buttons a{
+
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   HASHTAGS FOOTER
+========================================================= */
+
+.footer-hashtags{
+
+    position:relative;
+
+    z-index:3;
+
+    text-align:center;
+
+    padding:
+        20px 20px 35px;
+
+    color:var(--gold);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+}
+
+.hashtag-title{
+
+    margin-bottom:12px;
+
+    color:var(--gold-light);
+
+    font-size:17px;
+
+    font-weight:800;
+}
+
+.footer-hashtags a{
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.footer-hashtags a:hover{
+
+    color:var(--gold-light);
+
+    text-shadow:
+        0 0 10px
+        rgba(212,175,55,.6);
+}
+
+
+/* =========================================================
+   SHARE FAB
+========================================================= */
+
+.share-fab{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:99999;
+}
+
+.share-main{
+
+    width:64px;
+    height:64px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d86f,
+            #c99b12
+        );
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255,218,90,.95),
+
+        0 0 0 7px
+        rgba(255,218,90,.35),
+
+        0 10px 35px
+        rgba(255,210,60,.45),
+
+        0 0 60px
+        rgba(255,215,0,.25);
+
+    transition:.3s ease;
+}
+
+.share-main:hover{
+
+    transform:scale(1.08);
+}
+
+
+/* =========================================================
+   SHARE POPUP
+========================================================= */
+
+.share-popup{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        rgba(0,0,0,.58);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    z-index:100000;
+
+    animation:
+        shareFade .25s ease;
+}
+
+.share-popup.show{
+
+    display:flex;
+}
+
+@keyframes shareFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =========================================================
+   SHARE BOX
+========================================================= */
+
+.share-box{
+
+    width:min(330px,90%);
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,30,30,.97),
+            rgba(12,12,12,.97)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(212,175,55,.18);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    animation:
+        shareScale .25s ease;
+}
+
+@keyframes shareScale{
+
+    from{
+        transform:scale(.92);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.share-box h3{
+
+    margin:0 0 6px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:var(--gold-light);
+}
+
+
+/* =========================================================
+   SHARE LINKS / BUTTONS
+========================================================= */
+
+.share-box a,
+.share-box button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:16px;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    color:#fff;
+}
+
+#shareWA{
+
+    background:#25D366;
+}
+
+#shareFB{
+
+    background:#1877F2;
+}
+
+#shareTG{
+
+    background:#229ED9;
+}
+
+#copyLink{
+
+    background:#3b3b3b;
+}
+
+#closeShare{
+
+    background:transparent;
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    color:var(--gold-light);
+}
+
+.share-box a:hover,
+.share-box button:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.06);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,0,0,.25);
+}
+
+.share-box a img{
+
+    width:30px;
+    height:30px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    filter:
+        drop-shadow(
+            0 2px 4px
+            rgba(0,0,0,.55)
+        );
+}
+
+.share-box span{
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   HASHTAG POPUP
+========================================================= */
+
+.hashtag-popup{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    animation:
+        popupFade .25s ease;
+}
+
+@keyframes popupFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =========================================================
+   HASHTAG BOX
+========================================================= */
+
+.hashtag-box{
+
+    width:min(360px,90%);
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:#0b0b0b;
+
+    border:
+        2px solid
+        var(--gold);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.65),
+
+        0 0 35px
+        rgba(212,175,55,.35);
+
+    animation:
+        popupZoom .28s ease;
+}
+
+@keyframes popupZoom{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px)
+            scale(.90);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   HASHTAG POPUP TITLE
+========================================================= */
+
+.hashtag-box h3{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    color:var(--gold-light);
+
+    font-size:25px;
+
+    font-weight:800;
+}
+
+
+/* =========================================================
+   HASHTAG BUTTONS
+========================================================= */
+
+.hashtag-box button{
+
+    width:100%;
+
+    min-height:68px;
+
+    margin:10px 0;
+
+    padding:
+        12px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    background:#111;
+
+    border:
+        2px solid
+        var(--gold);
+
+    border-radius:17px;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.hashtag-box button:hover{
+
+    background:#181818;
+
+    border-color:
+        var(--gold-light);
+
+    box-shadow:
+        0 0 18px
+        rgba(212,175,55,.45);
+
+    transform:translateY(-3px);
+}
+
+.hashtag-box button img{
+
+    width:55px;
+
+    height:55px;
+
+    max-width:55px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+}
+
+.hashtag-box button span{
+
+    flex:1;
+
+    text-align:center;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   GLOBAL BUTTON HOVER
+========================================================= */
+
+button{
+
+    transition:.25s ease;
+}
+
+button:focus,
+a:focus{
+
+    outline:
+        2px solid
+        rgba(212,175,55,.65);
+
+    outline-offset:3px;
+}
+
+
+/* =========================================================
+   DESKTOP LARGE
+========================================================= */
+
+@media (min-width:1400px){
+
+    .faq-container{
+
+        max-width:950px;
+    }
+
+    .faq-item summary{
+
+        font-size:22px;
+    }
+
+    .steps-grid{
+
+        max-width:1050px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1000px){
+
+    .mobile-menu{
+
+        gap:15px;
+    }
+
+    nav{
+
+        gap:15px;
+    }
+
+    nav a{
+
+font-size:16px;
+    }
+
+    .cta{
+
+        padding:
+            11px 16px;
+
+        font-size:13px;
+    }
+
+    .steps-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        max-width:700px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width:768px){
+
+    .header{
+
+        background:
+            rgba(8,8,8,.97);
+    }
+
+.logo{
+    height:96px;
+}
+
+    .menu-toggle{
+
+        display:block;
+    }
+
+    .mobile-menu{
+
+        display:none;
+
+        position:absolute;
+
+        top:100%;
+        left:0;
+
+        width:100%;
+
+        padding:
+            20px;
+
+        background:
+            rgba(10,10,10,.98);
+
+        border-bottom:
+            1px solid
+            rgba(212,175,55,.25);
+
+        box-shadow:
+            0 15px 35px
+            rgba(0,0,0,.4);
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:18px;
+    }
+
+    .mobile-menu.active{
+
+        display:flex;
+    }
+
+    .mobile-menu nav{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+    }
+
+    .mobile-menu nav a{
+
+        width:100%;
+
+        padding:
+            14px 5px;
+
+        text-align:center;
+
+        font-size:16px;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.05);
+    }
+
+    .mobile-menu nav a::after{
+
+        display:none;
+    }
+
+    .mobile-menu .lang-switch-inline{
+
+        justify-content:center;
+
+        order:-2;
+    }
+
+    .mobile-menu .cta{
+
+        width:100%;
+
+        min-height:48px;
+    }
+
+    main{
+
+        padding-top:78px;
+    }
+
+
+    /* FAQ */
+
+.faq-section{
+
+    scroll-margin-top:130px;
+
+    padding:
+        45px 16px 60px;
+}
+
+    .faq-section h1{
+
+        font-size:
+            clamp(
+                34px,
+                9vw,
+                44px
+            );
+    }
+
+    .faq-desc{
+
+        font-size:17px;
+
+        line-height:1.65;
+    }
+
+    .faq-list{
+
+        margin-top:30px;
+    }
+
+    .faq-item{
+
+        border-radius:17px;
+
+        margin:
+            13px 0;
+    }
+
+    .faq-item summary{
+
+        padding:
+            18px 17px;
+
+        font-size:17px;
+
+        line-height:1.45;
+
+        gap:10px;
+    }
+
+    .faq-item summary::before{
+
+        font-size:17px;
+    }
+
+    .faq-item summary::after{
+
+        font-size:21px;
+    }
+
+    .faq-item p{
+
+        padding:
+            18px 18px 22px;
+
+        font-size:16px;
+
+        line-height:1.75;
+    }
+
+
+    /* DAFTAR */
+
+    .daftar-section{
+
+        padding:
+            60px 16px 70px;
+    }
+
+    .daftar-section h2{
+
+        font-size:
+            clamp(
+                32px,
+                8vw,
+                40px
+            );
+    }
+
+    .section-desc{
+
+        font-size:17px;
+
+        margin-bottom:32px;
+    }
+
+    .steps-grid{
+
+        grid-template-columns:1fr;
+
+        max-width:420px;
+
+        gap:16px;
+
+        margin-bottom:35px;
+    }
+
+    .step-card{
+
+        min-height:auto;
+
+        padding:
+            20px 18px;
+    }
+
+    .step-card img{
+
+        width:125px;
+        height:125px;
+
+        margin-bottom:12px;
+    }
+
+    .step-card h3{
+
+        font-size:18px;
+    }
+
+
+    /* JOIN */
+
+    .join-interest-card{
+
+        margin:
+            40px auto 28px;
+
+        padding:
+            30px 18px;
+
+        border-radius:20px;
+    }
+
+    .join-icon-premium{
+
+        font-size:46px;
+    }
+
+    .join-count{
+
+        font-size:50px;
+
+        margin:
+            10px 0 13px;
+    }
+
+    .join-heading,
+    .join-subheading{
+
+        font-size:21px;
+
+        letter-spacing:1.5px;
+    }
+
+    .join-brand{
+
+        font-size:17px;
+
+        letter-spacing:1.5px;
+    }
+
+    .join-interest-card p{
+
+        font-size:16px;
+    }
+
+    .cta-button{
+
+        width:100%;
+
+        max-width:340px;
+
+        padding:
+            15px 22px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section{
+
+        padding:
+            55px 16px 40px;
+    }
+
+    .contact-logo img{
+
+        width:150px;
+    }
+
+    .contact-content h2{
+
+        font-size:34px;
+    }
+
+    .contact-content p{
+
+        font-size:16px;
+    }
+
+    .contact-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:12px;
+    }
+
+    .contact-buttons .cta{
+
+        width:100%;
+
+        max-width:360px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-hashtags{
+
+        padding:
+            15px 15px 30px;
+
+        font-size:13px;
+
+        line-height:2;
+    }
+
+    .hashtag-title{
+
+        font-size:15px;
+    }
+
+
+    /* SHARE */
+
+    .share-fab{
+
+        right:15px;
+
+        bottom:15px;
+    }
+
+    .share-main{
+
+        width:56px;
+        height:56px;
+    }
+
+
+    /* POPUPS */
+
+    .share-box{
+
+        width:min(310px,90%);
+
+        padding:20px;
+    }
+
+    .share-box a,
+    .share-box button{
+
+        padding:
+            12px 14px;
+
+        font-size:16px;
+    }
+
+    .share-box a img{
+
+        width:28px;
+        height:28px;
+    }
+
+    .hashtag-box{
+
+        width:min(330px,90%);
+
+        padding:22px;
+    }
+
+    .hashtag-box button{
+
+        min-height:62px;
+
+        padding:
+            10px 15px;
+
+        gap:15px;
+
+        font-size:16px;
+    }
+
+    .hashtag-box button img{
+
+        width:48px;
+        height:48px;
+    }
+
+
+    /* WATERMARK */
+
+    body::before{
+
+        width:340px;
+        height:340px;
+
+        opacity:.055;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+.logo{
+    height:96px;
+}
+
+    main{
+
+        padding-top:72px;
+    }
+
+    .faq-section{
+
+        padding-top:38px;
+    }
+
+    .faq-section h1{
+
+        font-size:32px;
+    }
+
+    .faq-desc{
+
+        font-size:16px;
+    }
+
+    .faq-item summary{
+
+        font-size:16px;
+
+        padding:
+            16px 14px;
+    }
+
+    .faq-item p{
+
+        font-size:15px;
+
+        padding:
+            17px 15px 20px;
+    }
+
+    .daftar-section h2{
+
+        font-size:30px;
+    }
+
+    .step-card img{
+
+        width:110px;
+        height:110px;
+    }
+
+    .step-card h3{
+
+        font-size:17px;
+    }
+
+    .join-count{
+
+        font-size:46px;
+    }
+
+    .join-heading,
+    .join-subheading{
+
+        font-size:19px;
+    }
+
+    .join-brand{
+
+        font-size:16px;
+    }
+
+    .contact-content h2{
+
+        font-size:30px;
+    }
+
+    .footer-hashtags{
+
+        font-size:12px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   END FAQ.CSS
+========================================================= */

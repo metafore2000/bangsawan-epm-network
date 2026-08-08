@@ -1,0 +1,1973 @@
+/* =========================================================
+   BANGSAWAN EPM
+   TESTIMONI PAGE
+   PREMIUM GOLD / BLACK
+========================================================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body{
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212,175,55,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,215,120,.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(212,175,55,.08),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #0b0b0b 45%,
+            #050505 100%
+        );
+
+    color:#fff;
+    font-family:Arial,sans-serif;
+    position:relative;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* =========================================================
+   GLOBAL WATERMARK
+========================================================= */
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+    height:900px;
+
+    background:url("images/be-logo.png")
+        center center /
+        contain
+        no-repeat;
+
+    opacity:.075;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    filter:blur(.4px);
+}
+
+
+/* =========================================================
+   FLOATING GOLD PARTICLES
+========================================================= */
+
+.floating-particles{
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+}
+
+.floating-particles span{
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    background:#d4af37;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 12px
+        rgba(212,175,55,.8);
+
+    animation:
+        particle 14s linear infinite;
+}
+
+
+.floating-particles span:nth-child(1){
+    left:8%;
+    top:90%;
+    animation-delay:0s;
+}
+
+.floating-particles span:nth-child(2){
+    left:22%;
+    top:105%;
+    animation-delay:2s;
+}
+
+.floating-particles span:nth-child(3){
+    left:35%;
+    top:95%;
+    animation-delay:4s;
+}
+
+.floating-particles span:nth-child(4){
+    left:50%;
+    top:110%;
+    animation-delay:1s;
+}
+
+.floating-particles span:nth-child(5){
+    left:64%;
+    top:92%;
+    animation-delay:5s;
+}
+
+.floating-particles span:nth-child(6){
+    left:76%;
+    top:104%;
+    animation-delay:3s;
+}
+
+.floating-particles span:nth-child(7){
+    left:88%;
+    top:98%;
+    animation-delay:6s;
+}
+
+.floating-particles span:nth-child(8){
+    left:94%;
+    top:108%;
+    animation-delay:7s;
+}
+
+
+@keyframes particle{
+
+    from{
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    85%{
+        opacity:1;
+    }
+
+    to{
+        transform:
+            translateY(-120vh)
+            scale(1.8);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:14px 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.header{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(8,8,8,.85);
+
+    border-bottom:
+        1px solid
+        rgba(212,175,55,.25);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    height:96px;
+
+    width:auto;
+
+    flex-shrink:0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+    display:flex;
+
+    gap:24px;
+
+    align-items:center;
+}
+
+nav a{
+    color:#ddd;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+    position:relative;
+}
+
+nav a:hover,
+nav a.active{
+    color:#d4af37;
+}
+
+
+/* ACTIVE GOLD LINE */
+
+nav a.active::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:-8px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    box-shadow:
+        0 0 8px
+        rgba(212,175,55,.65);
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCH
+========================================================= */
+
+.lang-switch-inline{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin:0 18px;
+    font-weight:700;
+}
+
+.lang-switch-inline button{
+    background:none;
+    border:none;
+    color:#d4af37;
+    cursor:pointer;
+    font-size:14px;
+    padding:0 2px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    background:#d4af37;
+
+    color:#111;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+    display:inline-block;
+}
+
+.cta:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(212,175,55,.25);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle{
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#d4af37;
+
+    font-size:32px;
+
+    cursor:pointer;
+}
+
+.mobile-menu{
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+    position:relative;
+
+    z-index:2;
+
+    padding-top:125px;
+}
+
+
+/* =========================================================
+   TESTIMONI SECTION
+========================================================= */
+
+.testimoni-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        70px 20px
+        90px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   TESTIMONI CONTAINER
+========================================================= */
+
+.testimoni-section .container{
+    max-width:1200px;
+
+    display:block;
+
+    text-align:center;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   TESTIMONI TITLE
+========================================================= */
+
+#testiTitle{
+    max-width:1100px;
+
+    margin:
+        0 auto 22px;
+
+    color:#fff;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    text-align:center;
+
+    text-shadow:
+        0 4px 12px
+        rgba(0,0,0,.75);
+}
+
+
+/* =========================================================
+   TESTIMONI DESCRIPTION
+========================================================= */
+
+#testiDesc{
+    max-width:900px;
+
+    margin:
+        0 auto 35px;
+
+    color:#fff;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   TESTIMONI VIEWER
+========================================================= */
+
+.testi-viewer{
+    position:relative;
+
+    max-width:1100px;
+
+    margin:
+        35px auto 18px;
+}
+
+
+/* =========================================================
+   TESTIMONI FRAME
+========================================================= */
+
+.testi-frame{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:420px;
+
+    padding:20px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.30);
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.35),
+
+        inset
+        0 0 0 1px
+        rgba(255,255,255,.03);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   GOLD TOP GLOW
+========================================================= */
+
+.testi-frame::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    width:45%;
+    height:1px;
+
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    opacity:.8;
+}
+
+
+/* =========================================================
+   TESTIMONI IMAGE
+========================================================= */
+
+.testi-frame img{
+    display:block;
+
+    width:auto;
+
+    max-width:100%;
+
+    max-height:80vh;
+
+    object-fit:contain;
+
+    margin:auto;
+
+    border-radius:12px;
+
+    position:relative;
+
+    z-index:2;
+
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+}
+
+
+/* =========================================================
+   TESTIMONI ARROWS
+========================================================= */
+
+.testi-arrow{
+    position:absolute;
+
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:
+        rgba(0,0,0,.75);
+
+    color:#d4af37;
+
+    font-size:28px;
+
+    z-index:5;
+
+    transition:.25s;
+}
+
+
+.testi-prev{
+    left:-70px;
+}
+
+.testi-next{
+    right:-70px;
+}
+
+
+.testi-arrow:hover{
+    background:#d4af37;
+
+    color:#111;
+
+    box-shadow:
+        0 0 20px
+        rgba(212,175,55,.45);
+}
+
+
+/* =========================================================
+   TESTIMONI COUNTER
+========================================================= */
+
+.testi-counter{
+    text-align:center;
+
+    color:#d4af37;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    margin-top:20px;
+
+    margin-bottom:25px;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-btn{
+    display:inline-block;
+
+    margin:
+        8px auto 0;
+
+    padding:
+        15px 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d86f,
+            #c99b12
+        );
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:800;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(212,175,55,.30);
+
+    transition:.30s ease;
+}
+
+
+.hero-btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:.8s;
+}
+
+.hero-btn:hover::before{
+    left:160%;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(212,175,55,.38);
+}
+
+
+/* =========================================================
+   CONTACT SECTION / FOOTER
+========================================================= */
+
+.contact-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        70px 20px
+        45px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+
+.contact-container{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:30px;
+
+    max-width:1000px;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   CONTACT LOGO
+========================================================= */
+
+.contact-logo img{
+    width:180px;
+
+    height:auto;
+
+    display:block;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content{
+    text-align:center;
+
+    max-width:700px;
+}
+
+.contact-content h2{
+    color:#d4af37;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+    font-weight:800;
+}
+
+.contact-content p{
+    color:#fff;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
+.contact-buttons{
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.contact-buttons a{
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   OFFICIAL HASHTAGS
+========================================================= */
+
+.footer-hashtags{
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    padding:
+        20px 20px
+        35px;
+
+    color:#d4af37;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+.hashtag-title{
+    margin-bottom:15px;
+
+    color:#d4af37;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+.footer-hashtags a{
+    color:#d4af37;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.footer-hashtags a:hover{
+    color:#ffd86b;
+
+    text-shadow:
+        0 0 10px
+        rgba(212,175,55,.6);
+}
+
+
+/* =========================================================
+   FLOATING SHARE BUTTON
+========================================================= */
+
+.share-fab{
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    z-index:99999;
+}
+
+
+/* MAIN SHARE */
+
+.share-main{
+    width:64px;
+
+    height:64px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d86f,
+            #c99b12
+        );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255,218,90,.95),
+
+        0 0 0 7px
+        rgba(255,218,90,.35),
+
+        0 10px 35px
+        rgba(255,210,60,.45),
+
+        0 0 60px
+        rgba(255,215,0,.25);
+
+    transition:.30s ease;
+}
+
+.share-main:hover{
+    transform:scale(1.08);
+}
+
+
+/* SHARE SVG */
+
+
+/* =========================================================
+   SHARE POPUP
+========================================================= */
+
+.share-popup{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(0,0,0,.58);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    z-index:100000;
+
+    animation:
+        shareFade .25s ease;
+}
+
+
+.share-popup.show{
+    display:flex;
+}
+
+
+@keyframes shareFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* SHARE BOX */
+
+.share-box{
+    width:min(330px,90%);
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,30,30,.96),
+            rgba(12,12,12,.96)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(212,175,55,.18);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    animation:
+        shareScale .25s ease;
+}
+
+
+@keyframes shareScale{
+
+    from{
+        transform:scale(.92);
+
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+
+        opacity:1;
+    }
+}
+
+
+/* SHARE TITLE */
+
+.share-box h3{
+    margin:
+        0 0 6px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#ffd86b;
+}
+
+
+/* SHARE ITEMS */
+
+.share-box a,
+.share-box button{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:
+        14px 16px;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    font-size:20px;
+
+    text-decoration:none;
+
+    border:none;
+
+    transition:.25s;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0,0,0,.95),
+
+        0 0 8px
+        rgba(0,0,0,.45);
+}
+
+
+/* SHARE COLORS */
+
+#shareWA{
+    background:#25D366;
+}
+
+#shareFB{
+    background:#1877F2;
+}
+
+#shareTG{
+    background:#229ED9;
+}
+
+#copyLink{
+    background:#3b3b3b;
+}
+
+#closeShare{
+    background:transparent;
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    color:#ffd86b;
+}
+
+
+/* SHARE HOVER */
+
+.share-box a:hover,
+.share-box button:hover{
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.06);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,0,0,.25);
+}
+
+
+/* SHARE ICONS */
+
+.share-box a img,
+.share-box button img{
+    width:32px;
+
+    height:32px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    margin-right:4px;
+
+    filter:
+        drop-shadow(
+            0 2px 4px
+            rgba(0,0,0,.55)
+        )
+
+        drop-shadow(
+            0 0 4px
+            rgba(255,255,255,.18)
+        );
+
+    transition:.30s ease;
+}
+
+
+.share-box a span,
+.share-box button span{
+    flex:none;
+
+    text-align:center;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    /* BODY WATERMARK */
+
+    body::before{
+        width:340px;
+
+        height:340px;
+
+        opacity:.055;
+    }
+
+
+    /* HEADER */
+
+    .header .container{
+        position:relative;
+
+        justify-content:space-between;
+
+        align-items:center;
+    }
+
+
+    .logo{
+        height:70px;
+    }
+
+
+    /* MENU BUTTON */
+
+    .menu-toggle{
+        display:block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu{
+        display:none;
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:#111;
+
+        padding:20px;
+
+        box-sizing:border-box;
+
+        flex-direction:column;
+
+        z-index:9999;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+    }
+
+
+    .mobile-menu nav{
+        display:flex;
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:0;
+    }
+
+    .mobile-menu nav a{
+        padding:12px 0;
+
+        text-align:center;
+    }
+
+
+    .mobile-menu .cta{
+        width:100%;
+
+        text-align:center;
+    }
+
+
+    .lang-switch-inline{
+        justify-content:center;
+    }
+
+
+    /* MAIN */
+
+    main{
+        padding-top:100px;
+    }
+
+
+    /* TESTIMONI */
+
+    .testimoni-section{
+        padding:
+            55px 15px
+            70px;
+    }
+
+
+    #testiTitle{
+        font-size:38px;
+
+        line-height:1.2;
+    }
+
+
+    #testiDesc{
+        font-size:17px;
+
+        line-height:1.6;
+
+        margin-bottom:25px;
+    }
+
+
+    .testi-viewer{
+        max-width:95%;
+
+        margin-top:25px;
+    }
+
+
+    .testi-frame{
+        min-height:300px;
+
+        padding:12px;
+
+        border-radius:18px;
+    }
+
+
+    .testi-frame img{
+        max-height:68vh;
+    }
+
+
+    .testi-prev{
+        left:6px;
+    }
+
+
+    .testi-next{
+        right:6px;
+    }
+
+
+    .testi-arrow{
+        width:42px;
+
+        height:42px;
+
+        font-size:22px;
+    }
+
+
+    .testi-counter{
+        font-size:17px;
+
+        margin-top:16px;
+    }
+
+
+    /* BUTTON */
+
+    .hero-btn{
+        font-size:16px;
+
+        padding:
+            14px 24px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section{
+        padding:
+            55px 15px
+            35px;
+    }
+
+
+    .contact-content h2{
+        font-size:30px;
+    }
+
+
+    .contact-content p{
+        font-size:17px;
+    }
+
+
+    .contact-buttons{
+        flex-direction:column;
+
+        width:100%;
+
+        gap:14px;
+    }
+
+
+    .contact-buttons a{
+        width:100%;
+
+        text-align:center;
+    }
+
+
+    /* HASHTAGS */
+
+    .footer-hashtags{
+        font-size:14px;
+
+        line-height:2;
+    }
+
+
+    .hashtag-title{
+        font-size:22px;
+    }
+
+
+    /* SHARE */
+
+    .share-fab{
+        right:15px;
+
+        bottom:15px;
+    }
+
+
+    .share-main{
+        width:56px;
+
+        height:56px;
+    }
+
+
+    /* SHARE POPUP */
+
+    .share-box{
+        width:
+            min(310px,90%);
+
+        padding:18px;
+    }
+
+
+    .share-box a,
+    .share-box button{
+        padding:
+            12px 16px;
+
+        font-size:16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+    #testiTitle{
+        font-size:34px;
+    }
+
+
+    .testi-frame{
+        min-height:240px;
+    }
+
+
+    .hero-btn{
+        width:100%;
+
+        text-align:center;
+    }
+
+}
+
+/* =========================================================
+   JUMLAH PAPARAN WEBSITE
+========================================================= */
+
+.visitor-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        80px 20px
+        90px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+
+.visitor-container{
+    max-width:900px;
+
+    margin:0 auto;
+
+    display:block;
+}
+
+
+.visitor-card{
+    position:relative;
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    padding:
+        65px 30px
+        60px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(212,175,55,.12);
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+
+/* GOLD TOP LINE */
+
+.visitor-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    width:180px;
+    height:2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(212,175,55,.55);
+}
+
+
+/* EYE ICON */
+
+.visitor-eye{
+    font-size:48px;
+
+    margin-bottom:18px;
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(212,175,55,.45)
+        );
+}
+
+
+/* NUMBER */
+
+.visitor-number{
+    color:#d4af37;
+
+    font-size:72px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 15px
+        rgba(212,175,55,.25);
+}
+
+
+/* TITLE */
+
+.visitor-title{
+    color:#fff;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    margin-bottom:25px;
+}
+
+
+/* GOLD LINE */
+
+.visitor-line{
+    width:160px;
+
+    height:2px;
+
+    margin:
+        0 auto 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(212,175,55,.45);
+}
+
+
+/* DESCRIPTION */
+
+.visitor-card p{
+    color:#ddd;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin:0;
+}
+
+
+/* =========================================================
+   VIDEO PENERANGAN
+========================================================= */
+
+.video-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:
+        80px 20px
+        90px;
+
+    background:transparent;
+
+    text-align:center;
+}
+
+
+.video-section .container{
+    max-width:1100px;
+
+    margin:0 auto;
+
+    display:block;
+
+    text-align:center;
+}
+
+
+/* VIDEO TITLE */
+
+#videoTitle{
+    color:#d4af37;
+
+    font-size:46px;
+
+    font-weight:800;
+
+    line-height:1.25;
+
+    margin:
+        0 auto 20px;
+
+    text-align:center;
+
+    text-shadow:
+        0 4px 12px
+        rgba(0,0,0,.75);
+}
+
+
+/* VIDEO DESCRIPTION */
+
+#videoDesc{
+    max-width:850px;
+
+    margin:
+        0 auto 40px;
+
+    color:#fff;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    text-align:center;
+}
+
+
+/* VIDEO BOX */
+
+.video-box{
+    position:relative;
+
+    max-width:1080px;
+
+    margin:0 auto;
+
+    padding:20px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.40);
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(212,175,55,.12);
+
+    overflow:hidden;
+}
+
+
+/* GOLD TOP LINE */
+
+.video-box::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    width:45%;
+
+    height:2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px
+        rgba(212,175,55,.55);
+
+    z-index:2;
+}
+
+
+/* VIDEO */
+
+.video-box video{
+    display:block;
+
+    width:100%;
+
+    max-width:900px;
+
+    height:auto;
+
+    max-height:520px;
+
+    object-fit:contain;
+
+    margin:0 auto;
+
+    border-radius:14px;
+
+    background:#000;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .visitor-section{
+        padding:
+            55px 15px
+            70px;
+    }
+
+
+    .visitor-card{
+        padding:
+            45px 20px
+            42px;
+
+        border-radius:22px;
+    }
+
+
+    .visitor-eye{
+        font-size:40px;
+
+        margin-bottom:15px;
+    }
+
+
+    .visitor-number{
+        font-size:52px;
+
+        margin-bottom:18px;
+    }
+
+
+    .visitor-title{
+        font-size:24px;
+
+        margin-bottom:20px;
+    }
+
+
+    .visitor-line{
+        width:120px;
+
+        margin-bottom:22px;
+    }
+
+
+    .visitor-card p{
+        font-size:17px;
+
+        line-height:1.7;
+    }
+
+
+    /* VIDEO */
+
+    .video-section{
+        padding:
+            55px 15px
+            70px;
+    }
+
+
+    #videoTitle{
+        font-size:32px;
+
+        line-height:1.25;
+    }
+
+
+    #videoDesc{
+        font-size:17px;
+
+        line-height:1.6;
+
+        margin-bottom:25px;
+    }
+
+
+    .video-box{
+        padding:10px;
+
+        border-radius:18px;
+    }
+
+
+.video-box video{
+    width:100%;
+
+    max-width:100%;
+
+    max-height:360px;
+
+    object-fit:contain;
+
+    margin:0 auto;
+}
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+    .visitor-number{
+        font-size:46px;
+    }
+
+
+    .visitor-title{
+        font-size:22px;
+    }
+
+
+    #videoTitle{
+        font-size:28px;
+    }
+
+}

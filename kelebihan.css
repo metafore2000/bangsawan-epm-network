@@ -1,0 +1,2797 @@
+/* =========================================================
+   BANGSAWAN EPM
+   PAGE: KELEBIHAN
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212,175,55,.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,215,120,.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(212,175,55,.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #0b0b0b 45%,
+            #050505 100%
+        );
+
+    color: #fff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   WATERMARK BACKGROUND
+   SAMA SEPERTI HOME
+   ========================================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 900px;
+    height: 900px;
+
+    background:
+        url("images/be-logo.png")
+        center center /
+        contain
+        no-repeat;
+
+    opacity: .075;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    filter: blur(.4px);
+}
+
+
+/* =========================================================
+   GOLD BACKGROUND GLOW
+   ========================================================= */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    top: -220px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 900px;
+    height: 900px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.08),
+            transparent 70%
+        );
+
+    filter: blur(45px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   BACKGROUND GOLD LINE TEXTURE
+   ========================================================= */
+
+main::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 159px,
+            rgba(212,175,55,.025) 160px,
+            transparent 161px
+        );
+
+    opacity: .45;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   ALL SECTIONS TRANSPARENT
+   BACKGROUND SATU DARI ATAS SAMPAI BAWAH
+   ========================================================= */
+
+main,
+.opportunity-section,
+.benefits-section,
+.daftar-section,
+.contact-section,
+.footer {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.opportunity-section,
+.benefits-section,
+.daftar-section,
+.contact-section,
+.footer {
+
+    background:
+        transparent !important;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        14px 20px;
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+}
+
+
+/* =========================================================
+   FLOATING GOLD PARTICLES
+   SAMA SEPERTI HOME
+   ========================================================= */
+
+.floating-particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+.floating-particles span {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 4px;
+
+    background:
+        #d4af37;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px
+        rgba(212,175,55,.8);
+
+    animation:
+        particle 14s linear infinite;
+}
+
+
+.floating-particles span:nth-child(1) {
+    left: 8%;
+    top: 90%;
+    animation-delay: 0s;
+}
+
+.floating-particles span:nth-child(2) {
+    left: 22%;
+    top: 105%;
+    animation-delay: 2s;
+}
+
+.floating-particles span:nth-child(3) {
+    left: 35%;
+    top: 95%;
+    animation-delay: 4s;
+}
+
+.floating-particles span:nth-child(4) {
+    left: 50%;
+    top: 110%;
+    animation-delay: 1s;
+}
+
+.floating-particles span:nth-child(5) {
+    left: 64%;
+    top: 92%;
+    animation-delay: 5s;
+}
+
+.floating-particles span:nth-child(6) {
+    left: 76%;
+    top: 104%;
+    animation-delay: 3s;
+}
+
+.floating-particles span:nth-child(7) {
+    left: 88%;
+    top: 98%;
+    animation-delay: 6s;
+}
+
+.floating-particles span:nth-child(8) {
+    left: 94%;
+    top: 108%;
+    animation-delay: 7s;
+}
+
+
+@keyframes particle {
+
+    from {
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:
+            0;
+    }
+
+    15% {
+
+        opacity:
+            1;
+    }
+
+    85% {
+
+        opacity:
+            1;
+    }
+
+    to {
+
+        transform:
+            translateY(-120vh)
+            scale(1.8);
+
+        opacity:
+            0;
+    }
+
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background:
+        rgba(8,8,8,.85);
+
+    border-bottom:
+        1px solid
+        rgba(212,175,55,.25);
+}
+
+
+.logo-link {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    text-decoration:
+        none;
+}
+
+
+.logo {
+
+    height:
+        96px;
+
+    width:
+        auto;
+
+    flex-shrink:
+        0;
+}
+
+
+nav {
+
+    display:
+        flex;
+
+    gap:
+        24px;
+
+    align-items:
+        center;
+}
+
+
+nav a {
+
+    position:
+        relative;
+
+    color:
+        #ddd;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        bold;
+
+    transition:
+        .25s;
+}
+
+
+nav a:hover,
+nav a.active {
+
+    color:
+        #d4af37;
+}
+
+
+nav a::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        -6px;
+
+    width:
+        0;
+
+    height:
+        2px;
+
+    background:
+        #d4af37;
+
+    transition:
+        .25s;
+}
+
+
+nav a:hover::after,
+nav a.active::after {
+
+    width:
+        100%;
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+.lang-switch-inline {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    margin:
+        0 18px;
+
+    font-weight:
+        700;
+}
+
+
+.lang-switch-inline button {
+
+    background:
+        none;
+
+    border:
+        none;
+
+    color:
+        #d4af37;
+
+    cursor:
+        pointer;
+
+    font-size:
+        14px;
+
+    padding:
+        0 2px;
+}
+
+
+.lang-switch-inline button:hover {
+
+    color:
+        #fff;
+}
+
+
+.lang-switch-inline .sep {
+
+    color:
+        #999;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+
+    background:
+        #d4af37;
+
+    color:
+        #111;
+
+    padding:
+        12px 18px;
+
+    border-radius:
+        30px;
+
+    font-weight:
+        bold;
+
+    text-decoration:
+        none;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s;
+}
+
+
+.cta:hover {
+
+    transform:
+        translateY(-4px);
+
+    background:
+        #ffd86b;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.menu-toggle {
+
+    display:
+        none;
+
+    background:
+        none;
+
+    border:
+        none;
+
+    color:
+        #d4af37;
+
+    font-size:
+        32px;
+
+    cursor:
+        pointer;
+}
+
+
+.mobile-menu {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+}
+
+
+/* =========================================================
+   OPPORTUNITY SECTION
+   ========================================================= */
+
+.opportunity-section {
+
+    position:
+        relative;
+
+    padding:
+        160px 0 70px;
+
+    overflow:
+        hidden;
+}
+
+
+.opportunity-container {
+
+    max-width:
+        1400px;
+
+    margin:
+        0 auto;
+
+    padding:
+        0 40px;
+}
+
+
+.opportunity-header {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        70px;
+}
+
+
+.opportunity-header h1 {
+
+    font-size:
+        72px;
+
+    font-weight:
+        900;
+
+    line-height:
+        1.05;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        18px;
+}
+
+
+.opportunity-header h1 span {
+
+    display:
+        block;
+
+    color:
+        #d4af37;
+}
+
+
+.opportunity-header p {
+
+    font-size:
+        26px;
+
+    color:
+        #ddd;
+
+    line-height:
+        1.5;
+}
+
+
+.opportunity-header strong {
+
+    color:
+        #d4af37;
+}
+
+
+/* =========================================================
+   OPPORTUNITY GRID
+   ========================================================= */
+
+.opportunity-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        30px;
+}
+
+
+.opportunity-card {
+
+    position:
+        relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.28);
+
+    border-radius:
+        28px;
+
+    padding:
+        38px 28px 28px;
+
+    overflow:
+        hidden;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.25);
+
+    transition:
+        .35s ease;
+}
+
+
+.opportunity-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        #d4af37;
+
+    box-shadow:
+        0 18px 35px
+        rgba(212,175,55,.22);
+}
+
+
+.opportunity-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border-radius:
+        28px;
+
+    padding:
+        1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,216,107,.9),
+            rgba(212,175,55,.12),
+            rgba(255,216,107,.7)
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0)
+        content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:
+        xor;
+
+    mask-composite:
+        exclude;
+
+    pointer-events:
+        none;
+}
+
+
+.opportunity-number {
+
+    position:
+        absolute;
+
+    top:
+        15px;
+
+    right:
+        20px;
+
+    color:
+        rgba(212,175,55,.25);
+
+    font-size:
+        24px;
+
+    font-weight:
+        900;
+}
+
+
+/* =========================================================
+   OPPORTUNITY ICON
+   ========================================================= */
+
+.card-icon {
+
+    width:
+        120px;
+
+    height:
+        120px;
+
+    margin:
+        0 auto 26px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        2px solid
+        rgba(255,216,107,.95);
+
+    box-shadow:
+        0 0 18px
+        rgba(255,216,107,.45);
+
+    position:
+        relative;
+}
+
+
+.card-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -10px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        rgba(255,216,107,.25);
+
+    animation:
+        iconPulse 3s infinite;
+}
+
+
+@keyframes iconPulse {
+
+    0% {
+
+        transform:
+            scale(.96);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+
+        transform:
+            scale(1.06);
+
+        opacity:
+            1;
+    }
+
+    100% {
+
+        transform:
+            scale(.96);
+
+        opacity:
+            .25;
+    }
+
+}
+
+
+.card-icon img {
+
+    width:
+        62px;
+
+    height:
+        62px;
+
+    object-fit:
+        contain;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(255,220,120,.65)
+        );
+}
+
+
+/* =========================================================
+   OPPORTUNITY TEXT
+   ========================================================= */
+
+.opportunity-card h2 {
+
+    margin:
+        34px 0 12px;
+
+    font-size:
+        22px;
+
+    font-weight:
+        900;
+
+    line-height:
+        1.08;
+
+    text-transform:
+        uppercase;
+
+    text-align:
+        center;
+}
+
+
+.opportunity-card .subtitle {
+
+    margin:
+        0 0 18px;
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #ffd86b;
+
+    line-height:
+        1.35;
+
+    text-align:
+        center;
+}
+
+
+.opportunity-card p {
+
+    margin:
+        0;
+
+    color:
+        #f3f3f3;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.55;
+
+    text-align:
+        left;
+}
+
+
+.opportunity-card p strong {
+
+    color:
+        #ffd86b;
+}
+
+
+.opportunity-footer {
+
+    margin-top:
+        22px;
+
+    padding-top:
+        18px;
+
+    border-top:
+        1px solid
+        rgba(255,216,107,.22);
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
+
+    text-align:
+        left;
+}
+
+
+/* =========================================================
+   KELEBIHAN
+   ========================================================= */
+
+.benefits-section {
+
+    position:
+        relative;
+
+    padding:
+        80px 8% 70px;
+}
+
+
+.benefits-section .container {
+
+    display:
+        block;
+
+    text-align:
+        center;
+}
+
+
+.benefits-section h2 {
+
+    font-size:
+        56px;
+
+    color:
+        #d4af37;
+
+    margin-bottom:
+        20px;
+}
+
+
+.benefits-section > .container > p {
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto 36px;
+
+    font-size:
+        20px;
+
+    line-height:
+        1.6;
+}
+
+
+.benefits-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        28px;
+
+    max-width:
+        1000px;
+
+    margin:
+        0 auto;
+}
+
+
+.benefit-card {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.28);
+
+    border-radius:
+        22px;
+
+    padding:
+        18px 24px;
+
+    min-height:
+        420px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    transition:
+        .3s;
+}
+
+
+.benefit-card::before {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    left:
+        18px;
+
+    color:
+        #d4af37;
+
+    font-size:
+        20px;
+}
+
+
+.benefit-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(212,175,55,.2);
+
+    border-color:
+        #d4af37;
+}
+
+
+.benefit-icon {
+
+    display:
+        block;
+
+    width:
+        250px;
+
+    height:
+        150px;
+
+    object-fit:
+        contain;
+
+    margin:
+        0 auto 6px;
+}
+
+
+.benefit-card h3 {
+
+    font-size:
+        30px;
+
+    line-height:
+        1.2;
+
+    margin:
+        0;
+}
+
+
+.benefit-card p {
+
+    margin:
+        12px 0 0;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.cta-button {
+
+    display:
+        inline-block;
+
+    margin:
+        40px auto 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd86b,
+            #d4af37
+        );
+
+    padding:
+        16px 38px;
+
+    border-radius:
+        40px;
+
+    color:
+        #111;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 12px 35px
+        rgba(212,175,55,.35);
+
+    text-transform:
+        uppercase;
+
+    transition:
+        .25s ease;
+}
+
+
+.cta-button:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   CARA DAFTAR
+   ========================================================= */
+
+.daftar-section {
+
+    position:
+        relative;
+
+    padding:
+        90px 20px !important;
+
+    text-align:
+        center;
+}
+
+
+.daftar-section .container {
+
+    display:
+        block !important;
+
+    max-width:
+        1100px !important;
+
+    margin:
+        0 auto !important;
+}
+
+
+.daftar-section h2 {
+
+    font-size:
+        46px;
+
+    color:
+        #d4af37;
+
+    margin-bottom:
+        18px;
+}
+
+
+.daftar-section > .container > p {
+
+    max-width:
+        760px;
+
+    margin:
+        0 auto 40px;
+
+    font-size:
+        20px;
+
+    line-height:
+        1.7;
+}
+
+
+.daftar-section .benefits-grid {
+
+    display:
+        grid !important;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        24px;
+
+    max-width:
+        920px;
+
+    margin:
+        0 auto 40px;
+}
+
+
+.daftar-section .benefit-card {
+
+    min-height:
+        300px !important;
+
+    padding:
+        20px 0;
+}
+
+
+.join-icon {
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    object-fit:
+        contain;
+
+    display:
+        block;
+
+    margin:
+        20px auto 16px;
+}
+
+
+.daftar-section .benefit-card h3 {
+
+    font-size:
+        24px;
+
+    line-height:
+        1.25;
+
+    margin:
+        0 12px;
+}
+
+
+/* =========================================================
+   JOIN INTEREST CARD
+   ========================================================= */
+
+.join-interest-card {
+
+    max-width:
+        700px;
+
+    margin:
+        120px auto 35px;
+
+    padding:
+        42px 30px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    border-radius:
+        24px;
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.35),
+
+        0 0 28px
+        rgba(212,175,55,.18);
+
+    text-align:
+        center;
+
+    transition:
+        .35s;
+}
+
+
+.join-interest-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        #ffd86b;
+
+    box-shadow:
+        0 26px 55px
+        rgba(0,0,0,.45),
+
+        0 0 40px
+        rgba(212,175,55,.35);
+}
+
+
+.join-icon-premium {
+
+    font-size:
+        54px;
+}
+
+
+.join-count {
+
+    font-size:
+        64px;
+
+    font-weight:
+        900;
+
+    color:
+        #ffd86b;
+
+    margin:
+        10px 0;
+}
+
+
+.join-heading,
+.join-subheading,
+.join-brand {
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+}
+
+
+.join-heading,
+.join-subheading {
+
+    font-size:
+        28px;
+}
+
+
+.join-brand {
+
+    font-size:
+        20px;
+
+    color:
+        #d4af37;
+
+    margin-top:
+        6px;
+}
+
+
+.join-divider {
+
+    width:
+        180px;
+
+    height:
+        2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    margin:
+        22px auto;
+}
+
+
+.join-interest-card p {
+
+    color:
+        #ddd;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   HUBUNGI KAMI
+   ========================================================= */
+
+.contact-section {
+
+    padding:
+        60px 20px;
+
+    text-align:
+        center;
+}
+
+
+.contact-container {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    gap:
+        35px;
+}
+
+
+.contact-logo img {
+
+    width:
+        180px;
+
+    height:
+        auto;
+}
+
+
+.contact-content {
+
+    max-width:
+        700px;
+
+    text-align:
+        center;
+}
+
+
+.contact-content h2 {
+
+    color:
+        #d4af37;
+
+    font-size:
+        42px;
+
+    margin-bottom:
+        18px;
+}
+
+
+.contact-content p {
+
+    color:
+        #ddd;
+
+    line-height:
+        1.7;
+
+    font-size:
+        18px;
+
+    margin-bottom:
+        28px;
+}
+
+
+.contact-buttons {
+
+    display:
+        flex;
+
+    gap:
+        20px;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+}
+
+
+/* =========================================================
+   FOOTER HASHTAGS
+   ========================================================= */
+
+.footer-hashtags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    text-align:
+        center;
+
+    padding:
+        25px 20px 40px;
+
+    color:
+        #d4af37;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+}
+
+
+.footer-hashtags a {
+
+    color:
+        #d4af37;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        700;
+
+    transition:
+        .25s;
+}
+
+
+.footer-hashtags a:hover {
+
+    color:
+        #ffd86b;
+
+    text-shadow:
+        0 0 10px
+        rgba(212,175,55,.6);
+}
+
+
+.hashtag-title {
+
+    margin-bottom:
+        15px;
+}
+
+
+/* =========================================================
+   HASHTAG POPUP
+   ========================================================= */
+
+.hashtag-popup {
+
+    display:
+        none;
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        rgba(0,0,0,.58);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    z-index:
+        100000;
+}
+
+
+.hashtag-box {
+
+    width:
+        min(340px,90%);
+
+    padding:
+        28px;
+
+    border-radius:
+        22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,30,30,.96),
+            rgba(12,12,12,.96)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(212,175,55,.18);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+}
+
+
+.hashtag-box h3 {
+
+    text-align:
+        center;
+
+    color:
+        #ffd86b;
+
+    margin-bottom:
+        8px;
+
+    font-size:
+        24px;
+}
+
+
+.hashtag-box button {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        13px 16px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.28);
+
+    border-radius:
+        14px;
+
+    background:
+        #151515;
+
+    color:
+        #fff;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s;
+}
+
+
+.hashtag-box button:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        #d4af37;
+
+    box-shadow:
+        0 10px 25px
+        rgba(212,175,55,.18);
+}
+
+
+.hashtag-box button img {
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    object-fit:
+        contain;
+}
+
+
+/* =========================================================
+   FLOATING SHARE BUTTON
+   SAMA SEPERTI HOME
+   ========================================================= */
+
+.share-fab {
+
+    position:
+        fixed;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    z-index:
+        99999;
+}
+
+
+.share-main {
+
+    width:
+        64px;
+
+    height:
+        64px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    cursor:
+        pointer;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8d86f,
+            #c99b12
+        );
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    position:
+        relative;
+
+    box-shadow:
+
+        0 0 0 3px
+        rgba(255,218,90,.95),
+
+        0 0 0 7px
+        rgba(255,218,90,.35),
+
+        0 10px 35px
+        rgba(255,210,60,.45),
+
+        0 0 60px
+        rgba(255,215,0,.25);
+
+    transition:
+        .30s ease;
+}
+
+
+.share-main:hover {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   SHARE POPUP
+   ========================================================= */
+
+.share-popup {
+
+    display:
+        none;
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        rgba(0,0,0,.58);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    z-index:
+        100000;
+
+    animation:
+        shareFade .25s ease;
+}
+
+
+.share-popup.show {
+
+    display:
+        flex;
+}
+
+
+@keyframes shareFade {
+
+    from {
+
+        opacity:
+            0;
+    }
+
+    to {
+
+        opacity:
+            1;
+    }
+
+}
+
+
+.share-box {
+
+    width:
+        min(330px,90%);
+
+    padding:
+        28px;
+
+    border-radius:
+        22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30,30,30,.96),
+            rgba(12,12,12,.96)
+        );
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(212,175,55,.18);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        14px;
+
+    animation:
+        shareScale .25s ease;
+}
+
+
+@keyframes shareScale {
+
+    from {
+
+        transform:
+            scale(.92);
+
+        opacity:
+            0;
+    }
+
+    to {
+
+        transform:
+            scale(1);
+
+        opacity:
+            1;
+    }
+
+}
+
+
+.share-box h3 {
+
+    margin:
+        0 0 6px;
+
+    text-align:
+        center;
+
+    font-size:
+        24px;
+
+    color:
+        #ffd86b;
+}
+
+
+.share-box a,
+.share-box button {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        14px 16px;
+
+    border-radius:
+        16px;
+
+    font-weight:
+        700;
+
+    font-size:
+        20px;
+
+    text-decoration:
+        none;
+
+    border:
+        none;
+
+    transition:
+        .25s;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 2px 4px
+        rgba(0,0,0,.95),
+
+        0 0 8px
+        rgba(0,0,0,.45);
+
+    cursor:
+        pointer;
+}
+
+
+#shareWA {
+
+    background:
+        #25D366;
+}
+
+
+#shareFB {
+
+    background:
+        #1877F2;
+}
+
+
+#shareTG {
+
+    background:
+        #229ED9;
+}
+
+
+#copyLink {
+
+    background:
+        #3b3b3b;
+}
+
+
+#closeShare {
+
+    background:
+        transparent;
+
+    border:
+        1px solid
+        rgba(212,175,55,.45);
+
+    color:
+        #ffd86b;
+}
+
+
+.share-box a:hover,
+.share-box button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.06);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,0,0,.25);
+}
+
+
+.share-box a img,
+.share-box button img {
+
+    width:
+        32px;
+
+    height:
+        32px;
+
+    object-fit:
+        contain;
+
+    flex-shrink:
+        0;
+
+    margin-right:
+        4px;
+
+    filter:
+        drop-shadow(
+            0 2px 4px
+            rgba(0,0,0,.55)
+        )
+
+        drop-shadow(
+            0 0 4px
+            rgba(255,255,255,.18)
+        );
+
+    transition:
+        .30s ease;
+}
+
+
+.share-box a span,
+.share-box button span {
+
+    flex:
+        none;
+
+    text-align:
+        center;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .opportunity-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .benefits-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .daftar-section .benefits-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+
+    /* NAVBAR */
+
+    .header .container {
+
+        min-height:
+            78px;
+    }
+
+
+    .logo {
+
+        height:
+            68px;
+    }
+
+
+    .menu-toggle {
+
+        display:
+            block;
+    }
+
+
+    .mobile-menu {
+
+        display:
+            none;
+
+        position:
+            absolute;
+
+        top:
+            100%;
+
+        left:
+            0;
+
+        width:
+            100%;
+
+        background:
+            rgba(8,8,8,.97);
+
+        padding:
+            20px;
+
+        flex-direction:
+            column;
+
+        z-index:
+            9999;
+    }
+
+
+    .mobile-menu.active {
+
+        display:
+            flex;
+    }
+
+
+    .mobile-menu nav {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        width:
+            100%;
+    }
+
+
+    .mobile-menu nav a {
+
+        padding:
+            12px 0;
+
+        text-align:
+            center;
+    }
+
+
+    .mobile-menu .cta {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+
+    /* WATERMARK */
+
+    body::before {
+
+        width:
+            340px;
+
+        height:
+            340px;
+
+        opacity:
+            .055;
+    }
+
+
+    /* OPPORTUNITY */
+
+    .opportunity-section {
+
+        padding:
+            115px 0 50px;
+    }
+
+
+    .opportunity-container {
+
+        padding:
+            0 20px;
+    }
+
+
+    .opportunity-header {
+
+        margin-bottom:
+            40px;
+    }
+
+
+    .opportunity-header h1 {
+
+        font-size:
+            40px;
+    }
+
+
+    .opportunity-header p {
+
+        font-size:
+            18px;
+    }
+
+
+    .opportunity-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            24px;
+    }
+
+
+    .opportunity-card {
+
+        padding:
+            28px 22px;
+    }
+
+
+    .card-icon {
+
+        width:
+            90px;
+
+        height:
+            90px;
+    }
+
+
+    .card-icon img {
+
+        width:
+            50px;
+
+        height:
+            50px;
+    }
+
+
+    .opportunity-card h2 {
+
+        font-size:
+            20px;
+    }
+
+
+    .opportunity-card p {
+
+        text-align:
+            center;
+    }
+
+
+    .opportunity-footer {
+
+        text-align:
+            center;
+    }
+
+
+    /* KELEBIHAN */
+
+    .benefits-section {
+
+        padding:
+            60px 20px;
+    }
+
+
+    .benefits-section h2 {
+
+        font-size:
+            36px;
+    }
+
+
+    .benefits-section > .container > p {
+
+        font-size:
+            17px;
+    }
+
+
+    .benefits-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .benefit-card {
+
+        min-height:
+            auto;
+
+        padding:
+            24px 18px;
+    }
+
+
+    .benefit-icon {
+
+        width:
+            200px;
+
+        height:
+            130px;
+    }
+
+
+    .benefit-card h3 {
+
+        font-size:
+            28px;
+    }
+
+
+    /* CARA DAFTAR */
+
+    .daftar-section {
+
+        padding:
+            70px 20px !important;
+    }
+
+
+    .daftar-section h2 {
+
+        font-size:
+            34px;
+    }
+
+
+    .daftar-section .benefits-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .daftar-section .benefit-card {
+
+        min-height:
+            240px !important;
+    }
+
+
+    .join-icon {
+
+        width:
+            150px;
+
+        height:
+            150px;
+    }
+
+
+    /* JOIN CARD */
+
+    .join-interest-card {
+
+        margin:
+            80px auto 30px;
+
+        padding:
+            30px 18px;
+    }
+
+
+    .join-count {
+
+        font-size:
+            50px;
+    }
+
+
+    .join-heading,
+    .join-subheading {
+
+        font-size:
+            22px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-content h2 {
+
+        font-size:
+            34px;
+    }
+
+
+    .contact-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .contact-buttons .cta {
+
+        width:
+            100%;
+
+        max-width:
+            350px;
+
+        text-align:
+            center;
+    }
+
+
+    /* SHARE */
+
+    .share-fab {
+
+        right:
+            15px;
+
+        bottom:
+            15px;
+    }
+
+
+    .share-main {
+
+        width:
+            56px;
+
+        height:
+            56px;
+
+        font-size:
+            24px;
+    }
+
+
+    .share-box {
+
+        width:
+            min(310px,90%);
+
+        padding:
+            18px;
+    }
+
+
+    .share-box a,
+    .share-box button {
+
+        padding:
+            12px 16px;
+
+        font-size:
+            16px;
+    }
+
+
+    /* HASHTAG */
+
+    .hashtag-box {
+
+        width:
+            min(310px,90%);
+
+        padding:
+            20px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .opportunity-header h1 {
+
+        font-size:
+            32px;
+    }
+
+
+    .opportunity-header p {
+
+        font-size:
+            16px;
+    }
+
+
+    .benefits-section h2 {
+
+        font-size:
+            30px;
+    }
+
+
+    .daftar-section h2 {
+
+        font-size:
+            30px;
+    }
+
+
+    .join-count {
+
+        font-size:
+            44px;
+    }
+
+
+    .footer-hashtags {
+
+        font-size:
+            14px;
+
+        line-height:
+            2;
+    }
+
+}
