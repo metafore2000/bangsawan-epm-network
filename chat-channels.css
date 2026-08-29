@@ -1,0 +1,124 @@
+/* =========================================================
+   BANGSAWAN EPM — 3 CHANNEL CONTACT HUB
+   WhatsApp / Messenger / Telegram
+========================================================= */
+
+:root{
+  --be-chat-gold:#d4af37;
+  --be-chat-gold-light:#ffe48a;
+  --be-chat-black:#090909;
+  --be-chat-card:#151515;
+}
+
+.be-chat-fab{
+  position:fixed;
+  left:18px;
+  bottom:20px;
+  z-index:99998;
+  border:1px solid rgba(255,224,116,.52);
+  border-radius:999px;
+  padding:11px 16px 11px 12px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#111;
+  background:linear-gradient(145deg,#ffe58a,#c99b12);
+  box-shadow:0 10px 30px rgba(0,0,0,.38),0 0 25px rgba(212,175,55,.22);
+  font:800 14px/1 system-ui,-apple-system,"Segoe UI",sans-serif;
+  cursor:pointer;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.be-chat-fab:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.44),0 0 32px rgba(212,175,55,.3)}
+.be-chat-fab:focus-visible{outline:3px solid rgba(255,229,138,.7);outline-offset:3px}
+.be-chat-fab-icon{
+  width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;
+  color:#f7d55b;background:#0b0b0b;
+  box-shadow:inset 0 0 0 1px rgba(255,229,138,.28);
+}
+.be-chat-fab-icon svg{width:17px;height:17px;fill:currentColor}
+
+.be-chat-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:100001;
+  padding:20px;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.68);
+  backdrop-filter:blur(9px);
+  -webkit-backdrop-filter:blur(9px);
+}
+.be-chat-overlay.is-open{display:flex;animation:beChatFade .18s ease}
+@keyframes beChatFade{from{opacity:0}to{opacity:1}}
+
+.be-chat-dialog{
+  position:relative;
+  width:min(430px,100%);
+  border-radius:24px;
+  padding:27px 24px 22px;
+  background:linear-gradient(180deg,rgba(26,26,26,.99),rgba(9,9,9,.99));
+  border:1px solid rgba(212,175,55,.48);
+  box-shadow:0 28px 80px rgba(0,0,0,.72),0 0 42px rgba(212,175,55,.16);
+  color:#fff;
+  animation:beChatRise .2s ease;
+}
+@keyframes beChatRise{from{transform:translateY(10px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.be-chat-kicker{
+  margin:0 42px 6px 0;
+  color:var(--be-chat-gold-light);
+  font:800 11px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.be-chat-title{margin:0;color:#fff;font:900 27px/1.15 system-ui,-apple-system,"Segoe UI",sans-serif}
+.be-chat-subtitle{margin:8px 0 20px;color:#cfcfcf;font:500 14px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.be-chat-close{
+  position:absolute;right:16px;top:16px;
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);color:#eee;
+  font-size:23px;line-height:1;cursor:pointer;
+}
+.be-chat-close:hover{background:rgba(255,255,255,.12)}
+.be-chat-list{display:grid;gap:11px}
+.be-chat-channel{
+  display:grid;
+  grid-template-columns:48px 1fr 22px;
+  align-items:center;
+  gap:13px;
+  min-height:70px;
+  padding:10px 13px;
+  border-radius:17px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.045);
+  color:#fff!important;
+  text-decoration:none!important;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+}
+.be-chat-channel:hover{transform:translateY(-2px);border-color:rgba(212,175,55,.55);background:rgba(212,175,55,.075)}
+.be-chat-icon{
+  width:46px;height:46px;border-radius:14px;
+  display:grid;place-items:center;
+  color:#fff;
+  box-shadow:0 7px 18px rgba(0,0,0,.25);
+}
+.be-chat-icon svg{width:25px;height:25px;fill:currentColor}
+.be-chat-icon.wa{background:#25D366}
+.be-chat-icon.msg{background:linear-gradient(145deg,#00B2FF,#665CFF)}
+.be-chat-icon.tg{background:#229ED9}
+.be-chat-copy strong{display:block;margin:0 0 3px;font:800 16px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif}
+.be-chat-copy small{display:block;color:#bdbdbd;font:500 12px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif}
+.be-chat-arrow{color:var(--be-chat-gold-light);font-size:22px;text-align:center}
+.be-chat-note{margin:15px 2px 0;text-align:center;color:#8e8e8e;font:500 11px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+body.be-chat-lock{overflow:hidden!important}
+
+@media(max-width:768px){
+  .be-chat-fab{left:14px;bottom:15px;padding:10px 13px 10px 10px;font-size:13px}
+  .be-chat-fab-icon{width:28px;height:28px}
+  .be-chat-dialog{padding:25px 18px 19px;border-radius:21px}
+  .be-chat-title{font-size:24px}
+  .be-chat-channel{grid-template-columns:45px 1fr 18px;padding:9px 11px}
+  .be-chat-icon{width:43px;height:43px}
+}

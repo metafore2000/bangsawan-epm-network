@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
+<!-- Bangsawan EPM browser identity -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="application-name" content="Bangsawan EPM Network">
+<meta name="apple-mobile-web-app-title" content="Bangsawan EPM">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +21,7 @@
 
     <link rel="stylesheet" href="produk.css">
 
+<link rel="stylesheet" href="chat-channels.css">
 </head>
 
 <body>
@@ -311,8 +321,8 @@
                     href="https://wa.me/601115788698?text=Assalamualaikum%2C%20saya%20berminat%20untuk%20menyertai%20Bangsawan%20EPM%20dan%20ingin%20mendapatkan%20maklumat%20lanjut%20mengenai%20peluang%20serta%20cara%20untuk%20bermula."
                     id="waBtn"
                     target="_blank"
-                >
-                    CHAT WHATSAPP SEKARANG
+                 data-chat-trigger>
+                    CHAT DENGAN KAMI
                 </a>
 
 
@@ -1019,7 +1029,7 @@ const T = {
         contactDesc:
             "Perlukan bantuan sebelum bermula?<br>Kami sedia membantu anda.",
 
-        waBtn: "CHAT WHATSAPP SEKARANG",
+        waBtn: "CHAT DENGAN KAMI",
 
         groupBtn: "JOIN GROUP SUPPORT"
     },
@@ -1055,7 +1065,7 @@ const T = {
         contactDesc:
             "Need help before getting started?<br>We're here to assist you.",
 
-        waBtn: "CHAT ON WHATSAPP",
+        waBtn: "CHAT WITH US",
 
         groupBtn: "JOIN GROUP SUPPORT"
     }
@@ -1123,5 +1133,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script type="module" src="js/counter.js"></script>
+<script src="js/chat-channels.js"></script>
 </body>
 </html>
