@@ -7,7 +7,7 @@
     <title>Bangsawan EPM Network | FAQ</title>
 
     <link rel="stylesheet" href="faq.css">
-<link rel="stylesheet" href="live-stats-v2.css">
+<link rel="stylesheet" href="live-stats-v3.css">
 </head>
 
 <body>
@@ -606,10 +606,34 @@
 
 <!-- Global Bottom Live Stats -->
 
-<a class="be-ask-fab" href="https://wa.me/601115788698?text=Assalamualaikum%2C%20saya%20berminat%20untuk%20menyertai%20Bangsawan%20EPM%20dan%20ingin%20mendapatkan%20maklumat%20lanjut%20mengenai%20peluang%20serta%20cara%20untuk%20bermula." target="_blank" rel="noopener" aria-label="Tanya Kami">
+<button class="be-ask-fab" id="beAskFab" type="button" aria-label="Tanya Kami" aria-expanded="false" aria-controls="beAskPanel">
   <span class="be-ask-icon" aria-hidden="true">💬</span>
   <span class="be-ask-label" data-live-ask-label>Tanya Kami</span>
-</a>
+</button>
+<div class="be-ask-panel" id="beAskPanel" aria-hidden="true">
+  <div class="be-ask-panel-head">
+    <div>
+      <div class="be-ask-panel-kicker">BANGSAWAN EPM</div>
+      <div class="be-ask-panel-title" data-ask-panel-title>Pilih Cara Hubungi</div>
+    </div>
+    <button class="be-ask-close" id="beAskClose" type="button" aria-label="Tutup">×</button>
+  </div>
+  <div class="be-ask-links">
+    <a class="be-ask-channel" href="https://wasap.my/601115788698/nakjoin" target="_blank" rel="noopener">
+      <span class="be-ask-channel-icon" aria-hidden="true">💬</span>
+      <span>WhatsApp</span>
+    </a>
+    <a class="be-ask-channel" href="https://t.me/BangsawanEPMNetwork?text=nakjoin" target="_blank" rel="noopener">
+      <span class="be-ask-channel-icon" aria-hidden="true">✈️</span>
+      <span>Telegram</span>
+    </a>
+    <a class="be-ask-channel" href="https://www.facebook.com/MeniagaTanpaModalHQ" target="_blank" rel="noopener">
+      <span class="be-ask-channel-icon be-fb-icon" aria-hidden="true">f</span>
+      <span>Facebook</span>
+    </a>
+  </div>
+  <button class="be-ask-panel-close" id="beAskPanelClose" type="button" data-ask-close-label>Tutup</button>
+</div>
 <div class="be-live-stats" aria-label="Bangsawan EPM live statistics">
     <div class="be-live-stat">
         <span class="be-live-icon" aria-hidden="true">👁️</span>
@@ -623,7 +647,7 @@
         <span class="be-live-label" data-live-interest-label>BERMINAT</span>
     </div>
 </div>
-<script src="js/live-stats-v2.js"></script>
+<script src="js/live-stats-v3.js"></script>
 
 <!-- =========================================================
      FLOATING SHARE BUTTON
