@@ -2,15 +2,6 @@
 <html lang="ms">
 
 <head>
-<!-- Bangsawan EPM browser identity -->
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<meta name="application-name" content="Bangsawan EPM Network">
-<meta name="apple-mobile-web-app-title" content="Bangsawan EPM">
-
 
     <meta charset="UTF-8">
 
@@ -33,8 +24,8 @@
         rel="stylesheet"
         href="kelebihan.css"
     >
+<link rel="stylesheet" href="live-stats.css">
 
-<link rel="stylesheet" href="chat-channels.css">
 </head>
 
 
@@ -799,7 +790,7 @@
             </div>
 
 
-            <div class="join-count" id="joinCounter">
+            <div class="join-count" id="joinCounterLegacy">
                 ...
             </div>
 
@@ -896,11 +887,11 @@
                 <a
                     class="cta whatsapp-btn"
                     id="waBtn"
-                    href="https://wa.me/601115788698?text=Assalamualaikum%2C%20saya%20berminat%20untuk%20menyertai%20Bangsawan%20EPM%20dan%20ingin%20mendapatkan%20maklumat%20lanjut%20mengenai%20peluang%20serta%20cara%20untuk%20bermula."
+                    href="https://wa.me/601115788698?text=Assalamualaikum%2C%20saya%20berminat%20untuk%20menyertai%20Bangsawan%20EPM%20dan%20ingin%20mendapatkan%20maklumat%20lanjut."
                     target="_blank"
                     rel="noopener"
-                 data-chat-trigger>
-                    CHAT DENGAN KAMI
+                >
+                    CHAT WHATSAPP SEKARANG
                 </a>
 
 
@@ -1103,6 +1094,23 @@
 </footer>
 
 
+
+
+<!-- Global Bottom Live Stats -->
+<div class="be-live-stats" aria-label="Bangsawan EPM live statistics">
+    <div class="be-live-stat">
+        <span class="be-live-icon" aria-hidden="true">👁️</span>
+        <strong class="be-live-value" id="visitorCounter">...</strong>
+        <span class="be-live-label" data-live-views-label>PAPARAN</span>
+    </div>
+    <div class="be-live-divider" aria-hidden="true"></div>
+    <div class="be-live-stat">
+        <span class="be-live-icon" aria-hidden="true">🚀</span>
+        <strong class="be-live-value" id="joinCounter">...</strong>
+        <span class="be-live-label" data-live-interest-label>BERMINAT</span>
+    </div>
+</div>
+<script src="js/live-stats.js"></script>
 
 <!-- =====================================================
      FLOATING SHARE BUTTON
@@ -1856,7 +1864,7 @@ const T = {
         contact: {
             title: "HUBUNGI KAMI",
             desc: "Perlukan bantuan sebelum bermula?<br>Kami sedia membantu anda.",
-            wa: "CHAT DENGAN KAMI",
+            wa: "CHAT WHATSAPP SEKARANG",
             group: "JOIN GROUP SUPPORT"
         },
 
@@ -1942,7 +1950,7 @@ const T = {
         contact: {
             title: "CONTACT US",
             desc: "Need help before getting started?<br>We're here to assist you.",
-            wa: "CHAT WITH US",
+            wa: "CHAT ON WHATSAPP",
             group: "JOIN GROUP SUPPORT"
         },
 
@@ -2071,7 +2079,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script type="module" src="js/counter.js"></script>
-<script src="js/chat-channels.js"></script>
 </body>
 
 </html>
