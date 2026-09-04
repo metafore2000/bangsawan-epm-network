@@ -1,0 +1,367 @@
+/* =========================================================
+   BANGSAWAN EPM — FINAL GLOBAL LIVE BAR + CONTACT HUB V4
+   Mobile-first polish: readable live stats, safe floating CTAs,
+   no footer/hashtag overlap, accessible contact hub.
+   ========================================================= */
+
+:root{
+    --be-live-bar-height:64px;
+    --be-gold:#ffd86b;
+    --be-gold-deep:#d4af37;
+}
+
+/* Old large statistic cards remain in source for compatibility
+   with existing translation/counter code, but are not displayed. */
+.visitor-section,
+.join-interest-card{
+    display:none !important;
+}
+
+body{
+    padding-bottom:calc(var(--be-live-bar-height) + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+/* ===== LIVE STATS BAR ===== */
+.be-live-stats{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:99990;
+    min-height:var(--be-live-bar-height);
+    padding:0 max(12px, env(safe-area-inset-left, 0px)) env(safe-area-inset-bottom, 0px) max(12px, env(safe-area-inset-right, 0px));
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);
+    align-items:center;
+    background:linear-gradient(180deg,rgba(15,14,9,.985),rgba(3,3,3,.995));
+    border-top:1px solid rgba(255,216,107,.74);
+    box-shadow:0 -8px 26px rgba(0,0,0,.42),0 -1px 14px rgba(212,175,55,.13);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+}
+
+.be-live-stat{
+    min-width:0;
+    height:var(--be-live-bar-height);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    white-space:nowrap;
+}
+
+.be-live-icon{
+    flex:0 0 auto;
+    font-size:18px;
+    line-height:1;
+}
+
+.be-live-value{
+    flex:0 0 auto;
+    color:var(--be-gold);
+    font-size:23px;
+    line-height:1;
+    font-weight:900;
+    letter-spacing:.2px;
+    font-variant-numeric:tabular-nums;
+    text-shadow:0 0 13px rgba(255,216,107,.18);
+}
+
+.be-live-label{
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color:#fffdf6;
+    font-size:12px;
+    line-height:1;
+    font-weight:900;
+    letter-spacing:.75px;
+}
+
+.be-live-divider{
+    width:1px;
+    height:32px;
+    background:linear-gradient(180deg,transparent,rgba(255,216,107,.82),transparent);
+}
+
+/* ===== CONTACT SECTION CLEANUP =====
+   WhatsApp is now inside TANYA KAMI. Group Support stays as the
+   single primary CTA in the contact section. */
+.contact-buttons{
+    justify-content:center !important;
+    align-items:center !important;
+}
+.contact-buttons #waBtn{
+    display:none !important;
+}
+.contact-buttons #groupBtn{
+    width:min(100%,360px) !important;
+    max-width:360px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+}
+
+/* Existing Share button sits above the live bar. */
+.share-fab,
+.share-btn{
+    bottom:calc(var(--be-live-bar-height) + 18px + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+/* ===== FLOATING TANYA KAMI ===== */
+.be-ask-fab{
+    position:fixed;
+    left:20px;
+    bottom:calc(var(--be-live-bar-height) + 18px + env(safe-area-inset-bottom, 0px));
+    z-index:99999;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    min-height:56px;
+    padding:0 22px 0 14px;
+    border:1px solid rgba(255,216,107,.75);
+    border-radius:999px;
+    background:linear-gradient(135deg,#ffe780,#d9ad24);
+    color:#090909;
+    font:inherit;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:.1px;
+    cursor:pointer;
+    touch-action:manipulation;
+    box-shadow:0 10px 30px rgba(0,0,0,.38),0 0 22px rgba(212,175,55,.22);
+    transition:transform .22s ease,box-shadow .22s ease;
+}
+.be-ask-fab:hover{
+    transform:translateY(-2px);
+    box-shadow:0 13px 34px rgba(0,0,0,.44),0 0 28px rgba(212,175,55,.30);
+}
+.be-ask-fab:focus-visible,
+.be-ask-close:focus-visible,
+.be-ask-panel-close:focus-visible,
+.be-ask-channel:focus-visible{
+    outline:3px solid #fff;
+    outline-offset:3px;
+}
+.be-ask-icon{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    background:#0a0a0a;
+    color:var(--be-gold);
+    font-size:17px;
+    line-height:1;
+}
+.be-ask-label{white-space:nowrap;}
+
+/* ===== CONTACT HUB PANEL ===== */
+.be-ask-panel{
+    position:fixed;
+    left:20px;
+    bottom:calc(var(--be-live-bar-height) + 88px + env(safe-area-inset-bottom, 0px));
+    z-index:100001;
+    width:min(350px,calc(100vw - 40px));
+    max-height:calc(100dvh - var(--be-live-bar-height) - 110px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding:18px;
+    border:1px solid rgba(255,216,107,.48);
+    border-radius:22px;
+    background:linear-gradient(180deg,rgba(25,23,17,.99),rgba(7,7,7,.995));
+    box-shadow:0 22px 55px rgba(0,0,0,.58),0 0 30px rgba(212,175,55,.14);
+    -webkit-backdrop-filter:blur(14px);
+    backdrop-filter:blur(14px);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(10px) scale(.985);
+    transform-origin:bottom left;
+    transition:opacity .2s ease,visibility .2s ease,transform .2s ease;
+}
+.be-ask-panel.open{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0) scale(1);
+}
+.be-ask-panel-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:14px;
+}
+.be-ask-panel-kicker{
+    color:var(--be-gold-deep);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.7px;
+}
+.be-ask-panel-title{
+    margin-top:4px;
+    color:#fff;
+    font-size:20px;
+    line-height:1.2;
+    font-weight:900;
+}
+.be-ask-close{
+    width:34px;
+    height:34px;
+    border:1px solid rgba(212,175,55,.28);
+    border-radius:50%;
+    background:rgba(255,255,255,.04);
+    color:var(--be-gold);
+    font-size:24px;
+    line-height:1;
+    cursor:pointer;
+    touch-action:manipulation;
+}
+.be-ask-links{
+    display:grid;
+    gap:9px;
+}
+.be-ask-channel{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-height:52px;
+    padding:9px 13px;
+    border:1px solid rgba(212,175,55,.20);
+    border-radius:15px;
+    background:rgba(255,255,255,.035);
+    color:#f8f5ea;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:800;
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+}
+.be-ask-channel:hover{
+    transform:translateX(3px);
+    border-color:rgba(255,216,107,.65);
+    background:rgba(212,175,55,.08);
+}
+.be-ask-channel-icon{
+    width:34px;
+    height:34px;
+    flex:0 0 auto;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:#111;
+    color:var(--be-gold);
+    font-size:18px;
+    font-weight:900;
+}
+.be-fb-icon{
+    font-family:Arial,sans-serif;
+    font-size:22px;
+}
+.be-ask-panel-close{
+    width:100%;
+    margin-top:12px;
+    min-height:44px;
+    border:1px solid rgba(212,175,55,.30);
+    border-radius:13px;
+    background:transparent;
+    color:#e7e0cb;
+    font:inherit;
+    font-size:13px;
+    font-weight:800;
+    cursor:pointer;
+    touch-action:manipulation;
+}
+
+/* ===== MOBILE FINAL POLISH ===== */
+@media(max-width:520px){
+    :root{--be-live-bar-height:66px;}
+
+    /* The live numbers are information, not decoration: keep them large. */
+    .be-live-stats{
+        padding-left:8px;
+        padding-right:8px;
+    }
+    .be-live-stat{
+        gap:7px;
+        padding:0 5px;
+    }
+    .be-live-icon{display:none;}
+    .be-live-value{
+        font-size:24px;
+        letter-spacing:.1px;
+    }
+    .be-live-label{
+        font-size:12px;
+        letter-spacing:.45px;
+    }
+    .be-live-divider{height:32px;}
+
+    /* Floating controls stay useful but do not dominate the footer. */
+    .share-fab,
+    .share-btn{
+        right:12px !important;
+        bottom:calc(var(--be-live-bar-height) + 14px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+    .share-main{
+        width:62px !important;
+        height:62px !important;
+        min-width:62px !important;
+        min-height:62px !important;
+    }
+
+    .be-ask-fab{
+        left:14px;
+        bottom:calc(var(--be-live-bar-height) + 14px + env(safe-area-inset-bottom, 0px));
+        min-height:52px;
+        padding:0 18px 0 11px;
+        gap:8px;
+        font-size:14px;
+    }
+    .be-ask-icon{
+        width:32px;
+        height:32px;
+        font-size:16px;
+    }
+
+    /* Critical fix: at the end of the page the fixed controls must never
+       cover Official Network Hashtags or the final footer content. */
+    .footer-hashtags{
+        padding-bottom:145px !important;
+    }
+
+    .be-ask-panel{
+        left:14px;
+        bottom:calc(var(--be-live-bar-height) + 78px + env(safe-area-inset-bottom, 0px));
+        width:min(340px,calc(100vw - 28px));
+        max-height:calc(100dvh - var(--be-live-bar-height) - 100px);
+        padding:16px;
+    }
+    .be-ask-panel-title{font-size:18px;}
+    .be-ask-channel{min-height:50px;font-size:15px;}
+}
+
+@media(max-width:380px){
+    .be-live-value{font-size:22px;}
+    .be-live-label{font-size:11px;}
+    .be-live-stat{gap:5px;padding:0 3px;}
+    .be-ask-fab{padding-right:14px;}
+    .share-main{
+        width:58px !important;
+        height:58px !important;
+        min-width:58px !important;
+        min-height:58px !important;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    .be-ask-fab,
+    .be-ask-panel,
+    .be-ask-channel{
+        transition:none !important;
+    }
+}
